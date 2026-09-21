@@ -1,0 +1,369 @@
+{
+	Tools = ordered() {
+		StoyAnimertLydbolge = GroupOperator {
+			CtrlWZoom = false,
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "ACESTransform1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo { Pos = { 0, 0 } },
+			Tools = ordered() {
+				Background1_2 = Background {
+					CtrlWShown = false,
+					CustomData = { Path = { Map = { ["Setting:"] = "/Volumes/Stephan SW T7/ByHola/Stoy/Lydbølger/animasjon/" } }, },
+					Inputs = {
+						Width = Input { Value = 1024, },
+						Height = Input { Value = 1024, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						Type = Input { Value = FuID { "Gradient" }, },
+						Start = Input { Value = { 0.11328125, 0.61328125 }, },
+						End = Input { Value = { 0.3203125, 0.61328125 }, },
+						Gradient = Input {
+							Value = Gradient {
+								Colors = {
+									[0] = { 0, 0, 0, 1 },
+									[0.4875621890547] = { 1, 1, 1, 1 },
+									[1] = { 0, 0, 0, 1 }
+								}
+							},
+						},
+						Repeat = Input { Value = FuID { "Repeat" }, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -275, 8.75736 } },
+				},
+				Merge1_1 = Merge {
+					CtrlWShown = false,
+					CustomData = { Path = { Map = { ["Setting:"] = "/Volumes/Stephan SW T7/ByHola/Stoy/Lydbølger/animasjon/" } }, },
+					Inputs = {
+						Background = Input {
+							SourceOp = "FastNoise1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Background1_2",
+							Source = "Output",
+						},
+						ApplyMode = Input { Value = FuID { "Multiply" }, },
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -275, 41.7574 } },
+				},
+				FastNoise1 = FastNoise {
+					CtrlWShown = false,
+					CustomData = { Path = { Map = { ["Setting:"] = "/Volumes/Stephan SW T7/ByHola/Stoy/Lydbølger/animasjon/" } }, },
+					Inputs = {
+						Width = Input { Value = 1024, },
+						Height = Input { Value = 1024, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						Detail = Input { Value = 1.18, },
+						Contrast = Input { Value = 2.231, },
+						LockXY = Input { Value = 0, },
+						XScale = Input { Value = 11.2, },
+						YScale = Input { Value = 0.27, },
+						Seethe = Input { Value = 0.181, },
+						SeetheRate = Input { Value = 0.093, },
+						Color1Red = Input { Value = -1, },
+						Color1Green = Input { Value = -1, },
+						Color1Blue = Input { Value = -1, },
+						Color1Alpha = Input { Value = 1, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -385, 41.7574 } },
+				},
+				Background1_1 = Background {
+					CtrlWShown = false,
+					CustomData = { Path = { Map = { ["Setting:"] = "/Volumes/Stephan SW T7/ByHola/Stoy/Lydbølger/animasjon/" } }, },
+					Inputs = {
+						Width = Input { Value = 1024, },
+						Height = Input { Value = 1024, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						Type = Input { Value = FuID { "Gradient" }, },
+						Start = Input { Value = { 0.5, 1 }, },
+						End = Input { Value = { 0.5, 0 }, },
+						Gradient = Input {
+							Value = Gradient {
+								Colors = {
+									[0] = { 0, 0, 0, 1 },
+									[0.786069651741294] = { 1, 1, 1, 1 }
+								}
+							},
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -165, 8.75736 } },
+				},
+				Merge3_1 = Merge {
+					CtrlWShown = false,
+					CustomData = { Path = { Map = { ["Setting:"] = "/Volumes/Stephan SW T7/ByHola/Stoy/Lydbølger/animasjon/" } }, },
+					Inputs = {
+						Background = Input {
+							SourceOp = "Merge1_1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Background1_1",
+							Source = "Output",
+						},
+						ApplyMode = Input { Value = FuID { "Multiply" }, },
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -165, 41.7574 } },
+				},
+				AmbientLight1 = LightAmbient {
+					CtrlWShown = false,
+					CustomData = { Path = { Map = { ["Setting:"] = "/Volumes/Stephan SW T7/ByHola/Stoy/Lydbølger/animasjon/" } }, },
+					ViewInfo = OperatorInfo { Pos = { -55, 74.7574 } },
+				},
+				HopesRealShadow1 = Fuse.HopesRealShadow {
+					CtrlWShown = false,
+					Inputs = {
+						Input = Input {
+							SourceOp = "Renderer3D1",
+							Source = "Output",
+						},
+						Samples = Input { Value = 200, },
+						["Shadow Length"] = Input { Value = 0.102, },
+						Opacity = Input { Value = 1, },
+						Blur = Input { Value = 3.94, },
+						Position = Input { Value = { 0.597, 1.551 }, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 165, 107.758 } },
+					Colors = { TileColor = { R = 0.549019607843137, G = 0.352941176470588, B = 0.247058823529412 }, }
+				},
+				Renderer3D1 = Renderer3D {
+					CtrlWShown = false,
+					CustomData = { ToolVersion = 2, Path = { Map = { ["Setting:"] = "/Volumes/Stephan SW T7/ByHola/Stoy/Lydbølger/animasjon/" } }, },
+					Inputs = {
+						["RendererSoftware.LightingEnabled"] = Input {
+							Value = Number {
+								Value = 1
+							},
+						},
+						MotionBlur = Input { Value = 1, },
+						Quality = Input { Value = 5, },
+						Width = Input { Value = 3000, },
+						Height = Input { Value = 500, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						SceneInput = Input {
+							SourceOp = "Merge3D1",
+							Source = "Output",
+						},
+						OutputType = Input { Disabled = true, },
+						RendererType = Input { Value = FuID { "RendererOpenGL" }, },
+						["RendererOpenGL.AntiAliasing.Channels.RGBA.HighQuality.Enable"] = Input { Value = 1, },
+						["RendererOpenGL.AntiAliasing.Presets.Color.Supersampling.HighQuality.Rate"] = Input { Value = 3, },
+						["RendererOpenGL.AntiAliasing.Presets.Color.Multisampling.LowQuality.SampleCount"] = Input { Value = 2, },
+						["RendererOpenGL.AntiAliasing.Presets.Color.Multisampling.HighQuality.SampleCount"] = Input { Value = 3, },
+						["RendererOpenGL.AntiAliasing.Presets.Aux.Supersampling.HighQuality.Rate"] = Input { Value = 3, },
+						["RendererOpenGL.AntiAliasing.Presets.Aux.Multisampling.LowQuality.SampleCount"] = Input { Value = 2, },
+						["RendererOpenGL.AntiAliasing.Presets.Aux.Multisampling.HighQuality.SampleCount"] = Input { Value = 3, },
+						["RendererOpenGL.AccumulationEffects"] = Input { Value = 1, },
+						["RendererOpenGL.EnableAccumEffects"] = Input { Value = 1, },
+						["RendererOpenGL.AccumQuality"] = Input { Value = 32, },
+						["RendererOpenGL.LightingEnabled"] = Input { Value = 1, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 55, 107.758 } },
+					SubInputsData = {
+						RendererOpenGL = {
+							Version = 1
+						}
+					}
+				},
+				Merge3D1 = Merge3D {
+					CtrlWShown = false,
+					CustomData = { Path = { Map = { ["Setting:"] = "/Volumes/Stephan SW T7/ByHola/Stoy/Lydbølger/animasjon/" } }, },
+					Inputs = {
+						SceneInput1 = Input {
+							SourceOp = "Displace3D1",
+							Source = "Output",
+						},
+						SceneInput2 = Input {
+							SourceOp = "LYSFARGELYS",
+							Source = "Output",
+						},
+						SceneInput3 = Input {
+							SourceOp = "PointLight2",
+							Source = "Output",
+						},
+						SceneInput4 = Input {
+							SourceOp = "AmbientLight1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -55, 107.758 } },
+				},
+				Displace3D1 = Displace3D {
+					CtrlWShown = false,
+					CustomData = { Path = { Map = { ["Setting:"] = "/Volumes/Stephan SW T7/ByHola/Stoy/Lydbølger/animasjon/" } }, },
+					Inputs = {
+						SceneInput = Input {
+							SourceOp = "Merge3D2",
+							Source = "Output",
+						},
+						Scale = Input { Value = 0.425, },
+						CameraDisplacement = Input { Value = 1, },
+						CameraSelector = Input { Value = FuID { "Camera3D1" }, },
+						Input = Input {
+							SourceOp = "Merge3_1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -173.666, 107.758 } },
+					Colors = { TileColor = { R = 0.549019607843137, G = 0.352941176470588, B = 0.247058823529412 }, }
+				},
+				Merge3D2 = Merge3D {
+					CtrlWShown = false,
+					CustomData = { Path = { Map = { ["Setting:"] = "/Volumes/Stephan SW T7/ByHola/Stoy/Lydbølger/animasjon/" } }, },
+					Inputs = {
+						SceneInput1 = Input {
+							SourceOp = "Ribbon3D1",
+							Source = "Output",
+						},
+						SceneInput2 = Input {
+							SourceOp = "Camera3D1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -275, 107.758 } },
+				},
+				Ribbon3D1 = Ribbon3D {
+					CtrlWShown = false,
+					CustomData = { Path = { Map = { ["Setting:"] = "/Volumes/Stephan SW T7/ByHola/Stoy/Lydbølger/animasjon/" } }, },
+					Inputs = {
+						NumberOfLines = Input { Value = 25, },
+						SubdivisionLevel = Input { Value = 200, },
+						RibbonRotation = Input { Value = 90, },
+						["Start.Nest"] = Input { Value = 1, },
+						["Start.X"] = Input { Value = -2, },
+						["End.Nest"] = Input { Value = 1, },
+						["End.X"] = Input { Value = 2, },
+						["ObjectID.ObjectID"] = Input { Value = 1, },
+						["MtlStdInputs.Diffuse.Color.Red"] = Input { Value = 0.956862745098039, },
+						["MtlStdInputs.Diffuse.Color.Green"] = Input { Value = 0.917647058823529, },
+						["MtlStdInputs.Diffuse.Color.Blue"] = Input { Value = 0.0745098039215686, },
+						["MtlStdInputs.MaterialID"] = Input { Value = 1, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -385, 107.758 } },
+					Colors = { TileColor = { R = 0.549019607843137, G = 0.352941176470588, B = 0.247058823529412 }, }
+				},
+				Merge2_1 = Merge {
+					CtrlWShown = false,
+					CustomData = { Path = { Map = { ["Setting:"] = "/Volumes/Stephan SW T7/ByHola/Stoy/Lydbølger/animasjon/" } }, },
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Rectangle1_1",
+							Source = "Mask",
+						},
+						Background = Input {
+							SourceOp = "BACKGRUNN",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "HopesRealShadow1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 275, 107.758 } },
+				},
+				BACKGRUNN = Background {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftAlpha = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 275, 41.7574 } },
+					Colors = { TileColor = { R = 0.549019607843137, G = 0.352941176470588, B = 0.247058823529412 }, }
+				},
+				ACESTransform1 = AcesTransform {
+					CtrlWZoom = false,
+					CtrlWShown = false,
+					CustomData = { Path = { Map = { ["Setting:"] = "/Volumes/Stephan SW T7/ByHola/Stoy/Lydbølger/animasjon/" } }, },
+					Inputs = {
+						Blend = Input { Value = 0.913, },
+						AcesVersion = Input { Value = FuID { "ACES_VERSION_2_0_0" }, },
+						InputTransform200 = Input { Value = FuID { "IDT_ACESCG" }, },
+						OutputTransform200 = Input { Value = FuID { "ODT_SRGB_100" }, },
+						Input = Input {
+							SourceOp = "Merge2_1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 385, 107.758 } },
+				},
+				LYSFARGELYS = LightPoint {
+					CtrlWShown = false,
+					NameSet = true,
+					CustomData = { Path = { Map = { ["Setting:"] = "/Volumes/Stephan SW T7/ByHola/Stoy/Lydbølger/animasjon/" } }, },
+					Inputs = {
+						["Transform3DOp.Translate.X"] = Input { Value = 0.8695476732725, },
+						["Transform3DOp.Translate.Y"] = Input { Value = 0.1532522594977, },
+						["Transform3DOp.Translate.Z"] = Input { Value = 0.4981189305339, },
+						Red = Input { Value = 0.956862745098039, },
+						Green = Input { Value = 0.917647058823529, },
+						Blue = Input { Value = 0.0745098039215686, },
+						Intensity = Input { Value = 0.551, },
+						DecayType = Input { Value = 2, },
+						["ShadowLightInputs3D.ShadowsEnabled"] = Input { Value = 1, },
+						["ShadowLightInputs3D.ShadowMapSize"] = Input { Value = 2048, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 0, 140.758 } },
+					Colors = { TileColor = { R = 0.549019607843137, G = 0.352941176470588, B = 0.247058823529412 }, }
+				},
+				PointLight2 = LightPoint {
+					CtrlWShown = false,
+					CustomData = { Path = { Map = { ["Setting:"] = "/Volumes/Stephan SW T7/ByHola/Stoy/Lydbølger/animasjon/" } }, },
+					Inputs = {
+						["Transform3DOp.Translate.X"] = Input { Value = -2.1029372762763, },
+						["Transform3DOp.Translate.Y"] = Input { Value = 0.893546463719256, },
+						["Transform3DOp.Translate.Z"] = Input { Value = 0.926945514406612, },
+						Intensity = Input { Value = 3, },
+						DecayType = Input { Value = 2, },
+						["ShadowLightInputs3D.ShadowsEnabled"] = Input { Value = 1, },
+						["ShadowLightInputs3D.ShadowMapSize"] = Input { Value = 2048, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -110, 140.758 } },
+				},
+				Camera3D1 = Camera3D {
+					CtrlWShown = false,
+					CustomData = { Path = { Map = { ["Setting:"] = "/Volumes/Stephan SW T7/ByHola/Stoy/Lydbølger/animasjon/" } }, },
+					Inputs = {
+						["Transform3DOp.Translate.Z"] = Input { Value = 3.65965115707969, },
+						AoV = Input { Value = 15.7300722624058, },
+						FLength = Input { Value = 43, },
+						PlaneOfFocus = Input { Value = 3.612, },
+						["Stereo.Mode"] = Input { Value = FuID { "OffAxis" }, },
+						FilmGate = Input { Value = FuID { "BMD_URSA_4K_16x9" }, },
+						ApertureW = Input { Value = 0.831496062992126, },
+						ApertureH = Input { Value = 0.467716535433071, },
+						ControlVis = Input { Value = 1, },
+						PlaneOfFocusVis = Input { Value = 1, },
+						["SurfacePlaneInputs.ObjectID.ObjectID"] = Input { Value = 2, },
+						["MtlStdInputs.MaterialID"] = Input { Value = 2, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -275, 140.758 } },
+				},
+				Rectangle1_1 = RectangleMask {
+					CtrlWShown = false,
+					CustomData = { Path = { Map = { ["Setting:"] = "/Volumes/Stephan SW T7/ByHola/Stoy/Lydbølger/animasjon/" } }, },
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						SoftEdge = Input { Value = 0.0915, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Width = Input { Value = 0.8816629, },
+						Height = Input { Value = 1, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 275, 140.758 } },
+				}
+			},
+		}
+	},
+	ActiveTool = "StoyAnimertLydbolge"
+}

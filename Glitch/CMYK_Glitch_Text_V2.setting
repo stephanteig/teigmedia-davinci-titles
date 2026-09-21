@@ -1,0 +1,156 @@
+{
+	Tools = ordered() {
+		CMYK_Glitch_Text_V2 = GroupOperator {
+			CtrlWZoom = false,
+			Inputs = ordered() {
+				StyledText = InstanceInput { SourceOp = "MASTER", Source = "StyledText", Name = "Styled Text", Page = "MASTER" },
+				Font = InstanceInput { SourceOp = "MASTER", Source = "Font", Name = "Font", Page = "MASTER", ControlGroup = 1 },
+				Style = InstanceInput { SourceOp = "MASTER", Source = "Style", Name = "Style", Page = "MASTER", ControlGroup = 1 },
+				Size = InstanceInput { SourceOp = "MASTER", Source = "Size", Name = "Size", Page = "MASTER", Default = 0.18 },
+				CharacterSpacing = InstanceInput { SourceOp = "MASTER", Source = "CharacterSpacing", Name = "Character Spacing / Tracking", Page = "MASTER", Default = 1 },
+				LineSpacing = InstanceInput { SourceOp = "MASTER", Source = "LineSpacing", Name = "Line Spacing / Leading", Page = "MASTER", Default = 1 },
+				Center = InstanceInput { SourceOp = "MASTER", Source = "Center", Name = "Center", Page = "MASTER", Default = { 0.5, 0.5 } },
+				Layout = InstanceInput { SourceOp = "MASTER", Source = "LayoutType", Name = "Layout", Page = "MASTER" },
+				Rotation = InstanceInput { SourceOp = "MASTER", Source = "AngleZ", Name = "Rotation", Page = "MASTER", Default = 0 },
+				MasterRed = InstanceInput { SourceOp = "MASTER", Source = "Red1", Name = "Master Color", Page = "MASTER", ControlGroup = 2, Default = 0.101960784313725 },
+				MasterGreen = InstanceInput { SourceOp = "MASTER", Source = "Green1", Page = "MASTER", ControlGroup = 2, Default = 0.0901960784313725 },
+				MasterBlue = InstanceInput { SourceOp = "MASTER", Source = "Blue1", Page = "MASTER", ControlGroup = 2, Default = 0.0941176470588235 },
+
+				CyanOffsetX = InstanceInput { SourceOp = "Transform_CYAN", Source = "OffsetX", Name = "Offset X", Page = "CYAN", Default = 8 },
+				CyanOffsetY = InstanceInput { SourceOp = "Transform_CYAN", Source = "OffsetY", Name = "Offset Y", Page = "CYAN", Default = 0 },
+				CyanRed = InstanceInput { SourceOp = "CYAN", Source = "Red1", Name = "Color", Page = "CYAN", ControlGroup = 3, Default = 0.0823529411764706 },
+				CyanGreen = InstanceInput { SourceOp = "CYAN", Source = "Green1", Page = "CYAN", ControlGroup = 3, Default = 0.670588235294118 },
+				CyanBlue = InstanceInput { SourceOp = "CYAN", Source = "Blue1", Page = "CYAN", ControlGroup = 3, Default = 0.933333333333333 },
+
+				MagentaOffsetX = InstanceInput { SourceOp = "Transform_MAGENTA", Source = "OffsetX", Name = "Offset X", Page = "MAGENTA", Default = -8 },
+				MagentaOffsetY = InstanceInput { SourceOp = "Transform_MAGENTA", Source = "OffsetY", Name = "Offset Y", Page = "MAGENTA", Default = 0 },
+				MagentaRed = InstanceInput { SourceOp = "MAGENTA", Source = "Red1", Name = "Color", Page = "MAGENTA", ControlGroup = 4, Default = 0.905882352941176 },
+				MagentaGreen = InstanceInput { SourceOp = "MAGENTA", Source = "Green1", Page = "MAGENTA", ControlGroup = 4, Default = 0.125490196078431 },
+				MagentaBlue = InstanceInput { SourceOp = "MAGENTA", Source = "Blue1", Page = "MAGENTA", ControlGroup = 4, Default = 0.517647058823529 },
+
+				YellowOffsetX = InstanceInput { SourceOp = "Transform_YELLOW", Source = "OffsetX", Name = "Offset X", Page = "YELLOW", Default = -8 },
+				YellowOffsetY = InstanceInput { SourceOp = "Transform_YELLOW", Source = "OffsetY", Name = "Offset Y", Page = "YELLOW", Default = 8 },
+				YellowRed = InstanceInput { SourceOp = "YELLOW", Source = "Red1", Name = "Color", Page = "YELLOW", ControlGroup = 5, Default = 0.956862745098039 },
+				YellowGreen = InstanceInput { SourceOp = "YELLOW", Source = "Green1", Page = "YELLOW", ControlGroup = 5, Default = 0.917647058823529 },
+				YellowBlue = InstanceInput { SourceOp = "YELLOW", Source = "Blue1", Page = "YELLOW", ControlGroup = 5, Default = 0.0745098039215686 },
+
+				SlicesEnabled = InstanceInput { SourceOp = "MultiMerge", Source = "SlicesEnabled", Name = "Enable Slices", Page = "SLICES", Default = 1 },
+				SliceCount = InstanceInput { SourceOp = "MultiMerge", Source = "SliceCount", Name = "Slice Count", Page = "SLICES", Default = 3 },
+				SliceStrength = InstanceInput { SourceOp = "MultiMerge", Source = "SliceStrength", Name = "Horizontal Strength (px)", Page = "SLICES", Default = 12 },
+				SliceHeight = InstanceInput { SourceOp = "MultiMerge", Source = "SliceHeight", Name = "Slice Height (% of line)", Page = "SLICES", Default = 0.06 },
+				SliceSeed = InstanceInput { SourceOp = "MultiMerge", Source = "SliceSeed", Name = "Seed", Page = "SLICES", Default = 1 },
+				SliceSpeed = InstanceInput { SourceOp = "MultiMerge", Source = "SliceSpeed", Name = "Animation Speed", Page = "SLICES", Default = 0 }
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput { SourceOp = "Merge_Slice_6", Source = "Output" }
+			},
+			ViewInfo = GroupInfo { Pos = { 0, 0 } },
+			Tools = ordered() {
+				MASTER = TextPlus {
+					CtrlWZoom = false,
+					Inputs = {
+						UseFrameFormatSettings = Input { Value = 1 },
+						StyledText = Input { Value = "STØY" },
+						Font = Input { Value = "Commuters Sans" },
+						Style = Input { Value = "Bold" },
+						Size = Input { Value = 0.18 },
+						CharacterSpacing = Input { Value = 1 },
+						LineSpacing = Input { Value = 1 },
+						Center = Input { Value = { 0.5, 0.5 } },
+						LayoutType = Input { Value = 0 },
+						AngleZ = Input { Value = 0 },
+						Red1 = Input { Value = 0.101960784313725 }, Green1 = Input { Value = 0.0901960784313725 }, Blue1 = Input { Value = 0.0941176470588235 }
+					},
+					ViewInfo = OperatorInfo { Pos = { -330, 0 } },
+					NameSet = true
+				},
+				CYAN = TextPlus {
+					Inputs = { Red1 = Input { Value = 0.0823529411764706 }, Green1 = Input { Value = 0.670588235294118 }, Blue1 = Input { Value = 0.933333333333333 } },
+					SourceOp = "MASTER", ViewInfo = OperatorInfo { Pos = { -330, 110 } }, NameSet = true
+				},
+				Transform_CYAN = Transform {
+					UserControls = ordered() {
+						OffsetX = { INP_Integer = true, INP_Default = 8, INP_MinScale = -100, INP_MaxScale = 100, INP_IC_ControlPage = "Controls", LINKS_Name = "Offset X", LINKID_DataType = "Number" },
+						OffsetY = { INP_Integer = true, INP_Default = 0, INP_MinScale = -100, INP_MaxScale = 100, INP_IC_ControlPage = "Controls", LINKS_Name = "Offset Y", LINKID_DataType = "Number" }
+					},
+					Inputs = { OffsetX = Input { Value = 8 }, OffsetY = Input { Value = 0 }, Center = Input { Expression = "Point(0.5 + OffsetX/comp:GetPrefs('Comp.FrameFormat.Width'), 0.5 - OffsetY/comp:GetPrefs('Comp.FrameFormat.Height'))" }, Input = Input { SourceOp = "CYAN", Source = "Output" } },
+					ViewInfo = OperatorInfo { Pos = { -165, 110 } }, NameSet = true
+				},
+				MAGENTA = TextPlus {
+					Inputs = { Red1 = Input { Value = 0.905882352941176 }, Green1 = Input { Value = 0.125490196078431 }, Blue1 = Input { Value = 0.517647058823529 } },
+					SourceOp = "MASTER", ViewInfo = OperatorInfo { Pos = { -330, 220 } }, NameSet = true
+				},
+				Transform_MAGENTA = Transform {
+					UserControls = ordered() {
+						OffsetX = { INP_Integer = true, INP_Default = -8, INP_MinScale = -100, INP_MaxScale = 100, INP_IC_ControlPage = "Controls", LINKS_Name = "Offset X", LINKID_DataType = "Number" },
+						OffsetY = { INP_Integer = true, INP_Default = 0, INP_MinScale = -100, INP_MaxScale = 100, INP_IC_ControlPage = "Controls", LINKS_Name = "Offset Y", LINKID_DataType = "Number" }
+					},
+					Inputs = { OffsetX = Input { Value = -8 }, OffsetY = Input { Value = 0 }, Center = Input { Expression = "Point(0.5 + OffsetX/comp:GetPrefs('Comp.FrameFormat.Width'), 0.5 - OffsetY/comp:GetPrefs('Comp.FrameFormat.Height'))" }, Input = Input { SourceOp = "MAGENTA", Source = "Output" } },
+					ViewInfo = OperatorInfo { Pos = { -165, 220 } }, NameSet = true
+				},
+				YELLOW = TextPlus {
+					Inputs = { Red1 = Input { Value = 0.956862745098039 }, Green1 = Input { Value = 0.917647058823529 }, Blue1 = Input { Value = 0.0745098039215686 } },
+					SourceOp = "MASTER", ViewInfo = OperatorInfo { Pos = { -330, 330 } }, NameSet = true
+				},
+				Transform_YELLOW = Transform {
+					UserControls = ordered() {
+						OffsetX = { INP_Integer = true, INP_Default = -8, INP_MinScale = -100, INP_MaxScale = 100, INP_IC_ControlPage = "Controls", LINKS_Name = "Offset X", LINKID_DataType = "Number" },
+						OffsetY = { INP_Integer = true, INP_Default = 8, INP_MinScale = -100, INP_MaxScale = 100, INP_IC_ControlPage = "Controls", LINKS_Name = "Offset Y", LINKID_DataType = "Number" }
+					},
+					Inputs = { OffsetX = Input { Value = -8 }, OffsetY = Input { Value = 8 }, Center = Input { Expression = "Point(0.5 + OffsetX/comp:GetPrefs('Comp.FrameFormat.Width'), 0.5 - OffsetY/comp:GetPrefs('Comp.FrameFormat.Height'))" }, Input = Input { SourceOp = "YELLOW", Source = "Output" } },
+					ViewInfo = OperatorInfo { Pos = { -165, 330 } }, NameSet = true
+				},
+				MultiMerge = MultiMerge {
+					Inputs = {
+						Background = Input { SourceOp = "Transform_YELLOW", Source = "Output" },
+						["Layer1.Foreground"] = Input { SourceOp = "Transform_MAGENTA", Source = "Output" },
+						["Layer2.Foreground"] = Input { SourceOp = "Transform_CYAN", Source = "Output" },
+						["Layer3.Foreground"] = Input { SourceOp = "MASTER", Source = "Output" },
+						LayerName1 = Input { Value = "MAGENTA" }, LayerName2 = Input { Value = "CYAN" }, LayerName3 = Input { Value = "MASTER" },
+						LayerOrder = Input { Value = ScriptVal { { [0] = 1, 2, 3 } } },
+						SlicesEnabled = Input { Value = 1 }, SliceCount = Input { Value = 3 }, SliceStrength = Input { Value = 12 }, SliceHeight = Input { Value = 0.06 }, SliceSeed = Input { Value = 1 }, SliceSpeed = Input { Value = 0 }
+					},
+					UserControls = ordered() {
+						SlicesEnabled = { LINKS_Name = "Enable Slices", LINKID_DataType = "Number", INPID_InputControl = "CheckboxControl", INP_Default = 1, INP_IC_ControlPage = "Controls" },
+						SliceCount = { LINKS_Name = "Slice Count", LINKID_DataType = "Number", INPID_InputControl = "SliderControl", INP_Integer = true, INP_MinScale = 1, INP_MaxScale = 6, INP_Default = 3, INP_IC_ControlPage = "Controls" },
+						SliceStrength = { LINKS_Name = "Horizontal Strength (px)", LINKID_DataType = "Number", INPID_InputControl = "SliderControl", INP_MinScale = 0, INP_MaxScale = 100, INP_Default = 12, INP_IC_ControlPage = "Controls" },
+						SliceHeight = { LINKS_Name = "Slice Height (% of line)", LINKID_DataType = "Number", INPID_InputControl = "SliderControl", INP_MinScale = 0.01, INP_MaxScale = 0.3, INP_Default = 0.06, INP_IC_ControlPage = "Controls" },
+						SliceSeed = { LINKS_Name = "Seed", LINKID_DataType = "Number", INPID_InputControl = "SliderControl", INP_Integer = true, INP_MinScale = 1, INP_MaxScale = 1000, INP_Default = 1, INP_IC_ControlPage = "Controls" },
+						SliceSpeed = { LINKS_Name = "Animation Speed", LINKID_DataType = "Number", INPID_InputControl = "SliderControl", INP_MinScale = 0, INP_MaxScale = 2, INP_Default = 0, INP_IC_ControlPage = "Controls" }
+					},
+					ViewInfo = OperatorInfo { Pos = { 55, 165 } }, NameSet = true
+				},
+				Slice_Rect_1 = RectangleMask { Inputs = { Width = Input { Value = 1 }, Height = Input { Expression = "MASTER.Size*MultiMerge.SliceHeight" }, Center = Input { Expression = ": local s=tostring(MASTER.StyledText); local _,lines=s:gsub(string.char(10),''); lines=lines+1; local li=0%lines; local ly=MASTER.Center.Y+(li-(lines-1)/2)*MASTER.Size*MASTER.LineSpacing; local r=abs(sin((MultiMerge.SliceSeed+17)*12.9898+floor(time*MultiMerge.SliceSpeed)*78.233)); return Point(0.5,ly+(r-0.5)*MASTER.Size*0.7)" } }, ViewInfo = OperatorInfo { Pos = { 220, 275 } }, NameSet = true },
+				Slice_Transform_1 = Transform { Inputs = { Input = Input { SourceOp = "MultiMerge", Source = "Output" }, Center = Input { Expression = "Point(0.5 + MultiMerge.SliceStrength*sin((MultiMerge.SliceSeed+31)*9.173 + floor(time*MultiMerge.SliceSpeed)*13.73)/comp:GetPrefs('Comp.FrameFormat.Width'), 0.5)" } }, ViewInfo = OperatorInfo { Pos = { 220, 165 } }, NameSet = true },
+				Cut_Slice_1 = MatteControl { Inputs = { Background = Input { SourceOp = "MultiMerge", Source = "Output" }, ["Garbage.Matte"] = Input { SourceOp = "Slice_Rect_1", Source = "Mask" }, ["Garbage.MaskNest"] = Input { Value = 1 }, Blend = Input { Expression = "iif(MultiMerge.SlicesEnabled == 1 and MultiMerge.SliceCount >= 1, 1, 0)" } }, ViewInfo = OperatorInfo { Pos = { 330, 220 } }, NameSet = true },
+				Merge_Slice_1 = Merge { Inputs = { Background = Input { SourceOp = "Cut_Slice_1", Source = "Output" }, Foreground = Input { SourceOp = "Slice_Transform_1", Source = "Output" }, EffectMask = Input { SourceOp = "Slice_Rect_1", Source = "Mask" }, Blend = Input { Expression = "iif(MultiMerge.SlicesEnabled == 1 and MultiMerge.SliceCount >= 1, 1, 0)" }, PerformDepthMerge = Input { Value = 0 } }, ViewInfo = OperatorInfo { Pos = { 385, 165 } }, NameSet = true },
+
+				Slice_Rect_2 = RectangleMask { Inputs = { Width = Input { Value = 1 }, Height = Input { Expression = "MASTER.Size*MultiMerge.SliceHeight" }, Center = Input { Expression = ": local s=tostring(MASTER.StyledText); local _,lines=s:gsub(string.char(10),''); lines=lines+1; local li=1%lines; local ly=MASTER.Center.Y+(li-(lines-1)/2)*MASTER.Size*MASTER.LineSpacing; local r=abs(sin((MultiMerge.SliceSeed+34)*12.9898+floor(time*MultiMerge.SliceSpeed)*78.233)); return Point(0.5,ly+(r-0.5)*MASTER.Size*0.7)" } }, ViewInfo = OperatorInfo { Pos = { 440, 275 } }, NameSet = true },
+				Slice_Transform_2 = Transform { Inputs = { Input = Input { SourceOp = "MultiMerge", Source = "Output" }, Center = Input { Expression = "Point(0.5 + MultiMerge.SliceStrength*sin((MultiMerge.SliceSeed+62)*9.173 + floor(time*MultiMerge.SliceSpeed)*13.73)/comp:GetPrefs('Comp.FrameFormat.Width'), 0.5)" } }, ViewInfo = OperatorInfo { Pos = { 440, 165 } }, NameSet = true },
+				Cut_Slice_2 = MatteControl { Inputs = { Background = Input { SourceOp = "Merge_Slice_1", Source = "Output" }, ["Garbage.Matte"] = Input { SourceOp = "Slice_Rect_2", Source = "Mask" }, ["Garbage.MaskNest"] = Input { Value = 1 }, Blend = Input { Expression = "iif(MultiMerge.SlicesEnabled == 1 and MultiMerge.SliceCount >= 2, 1, 0)" } }, ViewInfo = OperatorInfo { Pos = { 550, 220 } }, NameSet = true },
+				Merge_Slice_2 = Merge { Inputs = { Background = Input { SourceOp = "Cut_Slice_2", Source = "Output" }, Foreground = Input { SourceOp = "Slice_Transform_2", Source = "Output" }, EffectMask = Input { SourceOp = "Slice_Rect_2", Source = "Mask" }, Blend = Input { Expression = "iif(MultiMerge.SlicesEnabled == 1 and MultiMerge.SliceCount >= 2, 1, 0)" }, PerformDepthMerge = Input { Value = 0 } }, ViewInfo = OperatorInfo { Pos = { 605, 165 } }, NameSet = true },
+
+				Slice_Rect_3 = RectangleMask { Inputs = { Width = Input { Value = 1 }, Height = Input { Expression = "MASTER.Size*MultiMerge.SliceHeight" }, Center = Input { Expression = ": local s=tostring(MASTER.StyledText); local _,lines=s:gsub(string.char(10),''); lines=lines+1; local li=2%lines; local ly=MASTER.Center.Y+(li-(lines-1)/2)*MASTER.Size*MASTER.LineSpacing; local r=abs(sin((MultiMerge.SliceSeed+51)*12.9898+floor(time*MultiMerge.SliceSpeed)*78.233)); return Point(0.5,ly+(r-0.5)*MASTER.Size*0.7)" } }, ViewInfo = OperatorInfo { Pos = { 660, 275 } }, NameSet = true },
+				Slice_Transform_3 = Transform { Inputs = { Input = Input { SourceOp = "MultiMerge", Source = "Output" }, Center = Input { Expression = "Point(0.5 + MultiMerge.SliceStrength*sin((MultiMerge.SliceSeed+93)*9.173 + floor(time*MultiMerge.SliceSpeed)*13.73)/comp:GetPrefs('Comp.FrameFormat.Width'), 0.5)" } }, ViewInfo = OperatorInfo { Pos = { 660, 165 } }, NameSet = true },
+				Cut_Slice_3 = MatteControl { Inputs = { Background = Input { SourceOp = "Merge_Slice_2", Source = "Output" }, ["Garbage.Matte"] = Input { SourceOp = "Slice_Rect_3", Source = "Mask" }, ["Garbage.MaskNest"] = Input { Value = 1 }, Blend = Input { Expression = "iif(MultiMerge.SlicesEnabled == 1 and MultiMerge.SliceCount >= 3, 1, 0)" } }, ViewInfo = OperatorInfo { Pos = { 770, 220 } }, NameSet = true },
+				Merge_Slice_3 = Merge { Inputs = { Background = Input { SourceOp = "Cut_Slice_3", Source = "Output" }, Foreground = Input { SourceOp = "Slice_Transform_3", Source = "Output" }, EffectMask = Input { SourceOp = "Slice_Rect_3", Source = "Mask" }, Blend = Input { Expression = "iif(MultiMerge.SlicesEnabled == 1 and MultiMerge.SliceCount >= 3, 1, 0)" }, PerformDepthMerge = Input { Value = 0 } }, ViewInfo = OperatorInfo { Pos = { 825, 165 } }, NameSet = true },
+
+				Slice_Rect_4 = RectangleMask { Inputs = { Width = Input { Value = 1 }, Height = Input { Expression = "MASTER.Size*MultiMerge.SliceHeight" }, Center = Input { Expression = ": local s=tostring(MASTER.StyledText); local _,lines=s:gsub(string.char(10),''); lines=lines+1; local li=3%lines; local ly=MASTER.Center.Y+(li-(lines-1)/2)*MASTER.Size*MASTER.LineSpacing; local r=abs(sin((MultiMerge.SliceSeed+68)*12.9898+floor(time*MultiMerge.SliceSpeed)*78.233)); return Point(0.5,ly+(r-0.5)*MASTER.Size*0.7)" } }, ViewInfo = OperatorInfo { Pos = { 880, 275 } }, NameSet = true },
+				Slice_Transform_4 = Transform { Inputs = { Input = Input { SourceOp = "MultiMerge", Source = "Output" }, Center = Input { Expression = "Point(0.5 + MultiMerge.SliceStrength*sin((MultiMerge.SliceSeed+124)*9.173 + floor(time*MultiMerge.SliceSpeed)*13.73)/comp:GetPrefs('Comp.FrameFormat.Width'), 0.5)" } }, ViewInfo = OperatorInfo { Pos = { 880, 165 } }, NameSet = true },
+				Cut_Slice_4 = MatteControl { Inputs = { Background = Input { SourceOp = "Merge_Slice_3", Source = "Output" }, ["Garbage.Matte"] = Input { SourceOp = "Slice_Rect_4", Source = "Mask" }, ["Garbage.MaskNest"] = Input { Value = 1 }, Blend = Input { Expression = "iif(MultiMerge.SlicesEnabled == 1 and MultiMerge.SliceCount >= 4, 1, 0)" } }, ViewInfo = OperatorInfo { Pos = { 990, 220 } }, NameSet = true },
+				Merge_Slice_4 = Merge { Inputs = { Background = Input { SourceOp = "Cut_Slice_4", Source = "Output" }, Foreground = Input { SourceOp = "Slice_Transform_4", Source = "Output" }, EffectMask = Input { SourceOp = "Slice_Rect_4", Source = "Mask" }, Blend = Input { Expression = "iif(MultiMerge.SlicesEnabled == 1 and MultiMerge.SliceCount >= 4, 1, 0)" }, PerformDepthMerge = Input { Value = 0 } }, ViewInfo = OperatorInfo { Pos = { 1045, 165 } }, NameSet = true },
+
+				Slice_Rect_5 = RectangleMask { Inputs = { Width = Input { Value = 1 }, Height = Input { Expression = "MASTER.Size*MultiMerge.SliceHeight" }, Center = Input { Expression = ": local s=tostring(MASTER.StyledText); local _,lines=s:gsub(string.char(10),''); lines=lines+1; local li=4%lines; local ly=MASTER.Center.Y+(li-(lines-1)/2)*MASTER.Size*MASTER.LineSpacing; local r=abs(sin((MultiMerge.SliceSeed+85)*12.9898+floor(time*MultiMerge.SliceSpeed)*78.233)); return Point(0.5,ly+(r-0.5)*MASTER.Size*0.7)" } }, ViewInfo = OperatorInfo { Pos = { 1100, 275 } }, NameSet = true },
+				Slice_Transform_5 = Transform { Inputs = { Input = Input { SourceOp = "MultiMerge", Source = "Output" }, Center = Input { Expression = "Point(0.5 + MultiMerge.SliceStrength*sin((MultiMerge.SliceSeed+155)*9.173 + floor(time*MultiMerge.SliceSpeed)*13.73)/comp:GetPrefs('Comp.FrameFormat.Width'), 0.5)" } }, ViewInfo = OperatorInfo { Pos = { 1100, 165 } }, NameSet = true },
+				Cut_Slice_5 = MatteControl { Inputs = { Background = Input { SourceOp = "Merge_Slice_4", Source = "Output" }, ["Garbage.Matte"] = Input { SourceOp = "Slice_Rect_5", Source = "Mask" }, ["Garbage.MaskNest"] = Input { Value = 1 }, Blend = Input { Expression = "iif(MultiMerge.SlicesEnabled == 1 and MultiMerge.SliceCount >= 5, 1, 0)" } }, ViewInfo = OperatorInfo { Pos = { 1210, 220 } }, NameSet = true },
+				Merge_Slice_5 = Merge { Inputs = { Background = Input { SourceOp = "Cut_Slice_5", Source = "Output" }, Foreground = Input { SourceOp = "Slice_Transform_5", Source = "Output" }, EffectMask = Input { SourceOp = "Slice_Rect_5", Source = "Mask" }, Blend = Input { Expression = "iif(MultiMerge.SlicesEnabled == 1 and MultiMerge.SliceCount >= 5, 1, 0)" }, PerformDepthMerge = Input { Value = 0 } }, ViewInfo = OperatorInfo { Pos = { 1265, 165 } }, NameSet = true },
+
+				Slice_Rect_6 = RectangleMask { Inputs = { Width = Input { Value = 1 }, Height = Input { Expression = "MASTER.Size*MultiMerge.SliceHeight" }, Center = Input { Expression = ": local s=tostring(MASTER.StyledText); local _,lines=s:gsub(string.char(10),''); lines=lines+1; local li=5%lines; local ly=MASTER.Center.Y+(li-(lines-1)/2)*MASTER.Size*MASTER.LineSpacing; local r=abs(sin((MultiMerge.SliceSeed+102)*12.9898+floor(time*MultiMerge.SliceSpeed)*78.233)); return Point(0.5,ly+(r-0.5)*MASTER.Size*0.7)" } }, ViewInfo = OperatorInfo { Pos = { 1320, 275 } }, NameSet = true },
+				Slice_Transform_6 = Transform { Inputs = { Input = Input { SourceOp = "MultiMerge", Source = "Output" }, Center = Input { Expression = "Point(0.5 + MultiMerge.SliceStrength*sin((MultiMerge.SliceSeed+186)*9.173 + floor(time*MultiMerge.SliceSpeed)*13.73)/comp:GetPrefs('Comp.FrameFormat.Width'), 0.5)" } }, ViewInfo = OperatorInfo { Pos = { 1320, 165 } }, NameSet = true },
+				Cut_Slice_6 = MatteControl { Inputs = { Background = Input { SourceOp = "Merge_Slice_5", Source = "Output" }, ["Garbage.Matte"] = Input { SourceOp = "Slice_Rect_6", Source = "Mask" }, ["Garbage.MaskNest"] = Input { Value = 1 }, Blend = Input { Expression = "iif(MultiMerge.SlicesEnabled == 1 and MultiMerge.SliceCount >= 6, 1, 0)" } }, ViewInfo = OperatorInfo { Pos = { 1430, 220 } }, NameSet = true },
+				Merge_Slice_6 = Merge { Inputs = { Background = Input { SourceOp = "Cut_Slice_6", Source = "Output" }, Foreground = Input { SourceOp = "Slice_Transform_6", Source = "Output" }, EffectMask = Input { SourceOp = "Slice_Rect_6", Source = "Mask" }, Blend = Input { Expression = "iif(MultiMerge.SlicesEnabled == 1 and MultiMerge.SliceCount >= 6, 1, 0)" }, PerformDepthMerge = Input { Value = 0 } }, ViewInfo = OperatorInfo { Pos = { 1485, 165 } }, NameSet = true }
+				}
+			}
+		},
+	ActiveTool = "CMYK_Glitch_Text_V2"
+}

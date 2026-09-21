@@ -1,0 +1,588 @@
+{
+	Tools = ordered() {
+		FlowyDots = MacroOperator {
+			CtrlWZoom = false,
+			NameSet = true,
+			Inputs = ordered() {
+				-- Background image input pin (connect a MediaIn/Loader here)
+				MainInput1 = InstanceInput {
+					SourceOp = "BGImageMerge",
+					Source = "Foreground",
+				},
+				-- ============ Dots page ============
+				DotColorType = InstanceInput {
+					SourceOp = "DotColor",
+					Source = "Type",
+					Page = "Dots",
+				},
+				DotTLRed = InstanceInput {
+					SourceOp = "DotColor",
+					Source = "TopLeftRed",
+					Name = "Color",
+					ControlGroup = 1,
+					Default = 0.372549019607843,
+					Page = "Dots",
+				},
+				DotTLGreen = InstanceInput {
+					SourceOp = "DotColor",
+					Source = "TopLeftGreen",
+					ControlGroup = 1,
+					Default = 0.745098039215686,
+					Page = "Dots",
+				},
+				DotTLBlue = InstanceInput {
+					SourceOp = "DotColor",
+					Source = "TopLeftBlue",
+					ControlGroup = 1,
+					Default = 0.92156862745098,
+					Page = "Dots",
+				},
+				DotTRRed = InstanceInput {
+					SourceOp = "DotColor",
+					Source = "TopRightRed",
+					Name = "Color 2 (TR)",
+					ControlGroup = 2,
+					Default = 1,
+					Page = "Dots",
+				},
+				DotTRGreen = InstanceInput {
+					SourceOp = "DotColor",
+					Source = "TopRightGreen",
+					ControlGroup = 2,
+					Default = 1,
+					Page = "Dots",
+				},
+				DotTRBlue = InstanceInput {
+					SourceOp = "DotColor",
+					Source = "TopRightBlue",
+					ControlGroup = 2,
+					Default = 1,
+					Page = "Dots",
+				},
+				DotBLRed = InstanceInput {
+					SourceOp = "DotColor",
+					Source = "BottomLeftRed",
+					Name = "Color 3 (BL)",
+					ControlGroup = 3,
+					Default = 0,
+					Page = "Dots",
+				},
+				DotBLGreen = InstanceInput {
+					SourceOp = "DotColor",
+					Source = "BottomLeftGreen",
+					ControlGroup = 3,
+					Default = 0,
+					Page = "Dots",
+				},
+				DotBLBlue = InstanceInput {
+					SourceOp = "DotColor",
+					Source = "BottomLeftBlue",
+					ControlGroup = 3,
+					Default = 0,
+					Page = "Dots",
+				},
+				DotBRRed = InstanceInput {
+					SourceOp = "DotColor",
+					Source = "BottomRightRed",
+					Name = "Color 4 (BR)",
+					ControlGroup = 4,
+					Default = 1,
+					Page = "Dots",
+				},
+				DotBRGreen = InstanceInput {
+					SourceOp = "DotColor",
+					Source = "BottomRightGreen",
+					ControlGroup = 4,
+					Default = 0,
+					Page = "Dots",
+				},
+				DotBRBlue = InstanceInput {
+					SourceOp = "DotColor",
+					Source = "BottomRightBlue",
+					ControlGroup = 4,
+					Default = 0,
+					Page = "Dots",
+				},
+				DotGradient = InstanceInput {
+					SourceOp = "DotColor",
+					Source = "Gradient",
+					Page = "Dots",
+				},
+				PathShape = InstanceInput {
+					SourceOp = "DotPath",
+					Source = "Polyline",
+					Name = "Path Shape",
+					Page = "Dots",
+				},
+				DotsPosition = InstanceInput {
+					SourceOp = "DotsTransform",
+					Source = "Center",
+					Name = "Position",
+					Page = "Dots",
+				},
+				DotsScale = InstanceInput {
+					SourceOp = "DotsTransform",
+					Source = "Size",
+					Name = "Size (overall)",
+					Default = 1,
+					Page = "Dots",
+				},
+				-- ============ Background page ============
+				BGColorType = InstanceInput {
+					SourceOp = "BGColor",
+					Source = "Type",
+					Page = "Background",
+				},
+				BGTLRed = InstanceInput {
+					SourceOp = "BGColor",
+					Source = "TopLeftRed",
+					Name = "Color",
+					ControlGroup = 5,
+					Default = 0,
+					Page = "Background",
+				},
+				BGTLGreen = InstanceInput {
+					SourceOp = "BGColor",
+					Source = "TopLeftGreen",
+					ControlGroup = 5,
+					Default = 0,
+					Page = "Background",
+				},
+				BGTLBlue = InstanceInput {
+					SourceOp = "BGColor",
+					Source = "TopLeftBlue",
+					ControlGroup = 5,
+					Default = 0,
+					Page = "Background",
+				},
+				BGTRRed = InstanceInput {
+					SourceOp = "BGColor",
+					Source = "TopRightRed",
+					Name = "Color 2 (TR)",
+					ControlGroup = 6,
+					Default = 0,
+					Page = "Background",
+				},
+				BGTRGreen = InstanceInput {
+					SourceOp = "BGColor",
+					Source = "TopRightGreen",
+					ControlGroup = 6,
+					Default = 0,
+					Page = "Background",
+				},
+				BGTRBlue = InstanceInput {
+					SourceOp = "BGColor",
+					Source = "TopRightBlue",
+					ControlGroup = 6,
+					Default = 0,
+					Page = "Background",
+				},
+				BGBLRed = InstanceInput {
+					SourceOp = "BGColor",
+					Source = "BottomLeftRed",
+					Name = "Color 3 (BL)",
+					ControlGroup = 7,
+					Default = 0,
+					Page = "Background",
+				},
+				BGBLGreen = InstanceInput {
+					SourceOp = "BGColor",
+					Source = "BottomLeftGreen",
+					ControlGroup = 7,
+					Default = 0,
+					Page = "Background",
+				},
+				BGBLBlue = InstanceInput {
+					SourceOp = "BGColor",
+					Source = "BottomLeftBlue",
+					ControlGroup = 7,
+					Default = 0,
+					Page = "Background",
+				},
+				BGBRRed = InstanceInput {
+					SourceOp = "BGColor",
+					Source = "BottomRightRed",
+					Name = "Color 4 (BR)",
+					ControlGroup = 8,
+					Default = 0,
+					Page = "Background",
+				},
+				BGBRGreen = InstanceInput {
+					SourceOp = "BGColor",
+					Source = "BottomRightGreen",
+					ControlGroup = 8,
+					Default = 0,
+					Page = "Background",
+				},
+				BGBRBlue = InstanceInput {
+					SourceOp = "BGColor",
+					Source = "BottomRightBlue",
+					ControlGroup = 8,
+					Default = 0,
+					Page = "Background",
+				},
+				BGGradient = InstanceInput {
+					SourceOp = "BGColor",
+					Source = "Gradient",
+					Page = "Background",
+				},
+				BGImageClip = InstanceInput {
+					SourceOp = "BGLoader",
+					Source = "Clip",
+					Name = "Background Image",
+					Page = "Background",
+				},
+				BGImageCenter = InstanceInput {
+					SourceOp = "BGTransform",
+					Source = "Center",
+					Name = "Image Center",
+					Page = "Background",
+				},
+				BGImageSize = InstanceInput {
+					SourceOp = "BGTransform",
+					Source = "Size",
+					Name = "Image Size",
+					Default = 1,
+					Page = "Background",
+				},
+				BGImageAspect = InstanceInput {
+					SourceOp = "BGTransform",
+					Source = "Aspect",
+					Name = "Image Aspect",
+					Default = 1,
+					Page = "Background",
+				},
+				BGImageAngle = InstanceInput {
+					SourceOp = "BGTransform",
+					Source = "Angle",
+					Name = "Image Angle",
+					Default = 0,
+					Page = "Background",
+				},
+				-- ============ Glow page ============
+				GlowGain = InstanceInput {
+					SourceOp = "Glow",
+					Source = "Gain",
+					Name = "Glow Gain",
+					Default = 2,
+					Page = "Glow",
+				},
+				GlowSizeCtl = InstanceInput {
+					SourceOp = "Glow",
+					Source = "XGlowSize",
+					Name = "Glow Size",
+					Default = 0.05,
+					Page = "Glow",
+				}
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "FinalMerge",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo { Pos = { 0, 0 } },
+			Tools = ordered() {
+				DotPath = PolylineMask {
+					DrawMode = "InsertAndModify",
+					DrawMode2 = "InsertAndModify",
+					NameSet = true,
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						SoftEdge = Input { Value = 0, },
+						BorderWidth = Input {
+							Value = 0.016,
+							Expression = "FlowyDots.DotSize",
+						},
+						PaintMode = Input { Value = FuID { "Minimum" }, },
+						WritePosition = Input {
+							Value = 0,
+							Expression = ":p = (time / FlowyDots.LoopFrames) % 1; if FlowyDots.Reverse > 0.5 then p = 1 - p end; local e = FlowyDots.Easing; if e == 1 then p = p*p elseif e == 2 then p = 1-(1-p)^2 elseif e == 3 then p = p*p*(3-2*p) end; return p",
+						},
+						WriteLength = Input { Value = 0, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Polyline = Input {
+							Value = Polyline {
+								Points = {
+									{ Linear = true, X = -0.307417974322397, Y = 0.418884664131812, RX = 0.188777936281503, RY = -0.0785804816223067 },
+									{ Linear = true, X = 0.258915834522111, Y = 0.183143219264892, LX = -0.188777936281503, LY = 0.0785804816223067, RX = -0.149786019971469, RY = -0.174904942965779 },
+									{ Linear = true, X = -0.190442225392297, Y = -0.341571609632446, LX = 0.149786019971469, LY = 0.174904942965779, RX = 0.00523062291963861, RY = 0.124207858048162 },
+									{ Linear = true, X = -0.174750356633381, Y = 0.0310519645120405, LX = -0.00523062291963861, LY = -0.124207858048162 }
+								}
+							},
+						},
+						Polyline2 = Input {
+							Value = Polyline {
+							},
+							Disabled = true,
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 0, 16.5 } },
+				},
+				DotColor = Background {
+					NameSet = true,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "DotPath",
+							Source = "Mask",
+						},
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						GlobalIn = Input { Value = -10000, },
+						GlobalOut = Input { Value = 10000, },
+						TopLeftRed = Input { Value = 0.372549019607843, },
+						TopLeftGreen = Input { Value = 0.745098039215686, },
+						TopLeftBlue = Input { Value = 0.92156862745098, },
+						TopRightRed = Input { Value = 1, },
+						TopRightGreen = Input { Value = 1, },
+						TopRightBlue = Input { Value = 1, },
+						BottomLeftRed = Input { Value = 0, },
+						BottomLeftGreen = Input { Value = 0, },
+						BottomLeftBlue = Input { Value = 0, },
+						BottomRightRed = Input { Value = 1, },
+						BottomRightGreen = Input { Value = 0, },
+						BottomRightBlue = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 110, 16.5 } },
+				},
+				Duplicator = Fuse.Duplicate {
+					NameSet = true,
+					Inputs = {
+						Copies = Input {
+							Value = 50,
+							Expression = "FlowyDots.DotCount",
+						},
+						TimeOffset = Input {
+							Value = -3,
+							Expression = "-(FlowyDots.LoopFrames / FlowyDots.DotCount)",
+						},
+						Polyline = Input {
+							Value = Polyline {
+							},
+						},
+						Background = Input {
+							SourceOp = "DotColor",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 220, 16.5 } },
+				},
+				Duplicator2 = Fuse.Duplicate {
+					NameSet = true,
+					Inputs = {
+						Copies = Input {
+							Value = 50,
+							Expression = "FlowyDots.DotCount",
+						},
+						TimeOffset = Input {
+							Value = 3,
+							Expression = "FlowyDots.LoopFrames / FlowyDots.DotCount",
+						},
+						Polyline = Input {
+							Value = Polyline {
+							},
+						},
+						Background = Input {
+							SourceOp = "DotColor",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 220, 49.5 } },
+				},
+				MergeDots = Merge {
+					NameSet = true,
+					Inputs = {
+						Background = Input {
+							SourceOp = "Duplicator",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Duplicator2",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 275, 33 } },
+				},
+				Glow = SoftGlow {
+					NameSet = true,
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						Gain = Input { Value = 2, },
+						XGlowSize = Input { Value = 0.05, },
+						Blend = Input {
+							Value = 1,
+							Expression = "FlowyDots.GlowEnabled",
+						},
+						Input = Input {
+							SourceOp = "MergeDots",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 330, 16.5 } },
+				},
+				DotsTransform = Transform {
+					NameSet = true,
+					Inputs = {
+						Input = Input {
+							SourceOp = "Glow",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 385, 16.5 } },
+				},
+				BGColor = Background {
+					NameSet = true,
+					Inputs = {
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftRed = Input { Value = 0, },
+						TopLeftGreen = Input { Value = 0, },
+						TopLeftBlue = Input { Value = 0, },
+						TopLeftAlpha = Input {
+							Value = 0,
+							Expression = "FlowyDots.BGEnabled",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 220, 82.5 } },
+				},
+				BGLoader = Loader {
+					Clips = ordered() {
+					},
+					NameSet = true,
+					Inputs = {
+						MissingFrames = Input { Value = 1, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 220, 115.5 } },
+				},
+				BGTransform = Transform {
+					NameSet = true,
+					Inputs = {
+						Input = Input {
+							SourceOp = "BGLoader",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 248, 115.5 } },
+				},
+				BGLoaderMerge = Merge {
+					NameSet = true,
+					Inputs = {
+						Background = Input {
+							SourceOp = "BGColor",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "BGTransform",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 248, 99 } },
+				},
+				BGImageMerge = Merge {
+					NameSet = true,
+					Inputs = {
+						Background = Input {
+							SourceOp = "BGLoaderMerge",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 275, 82.5 } },
+				},
+				FinalMerge = Merge {
+					NameSet = true,
+					Inputs = {
+						Background = Input {
+							SourceOp = "BGImageMerge",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "DotsTransform",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 330, 82.5 } },
+				}
+			},
+			UserControls = ordered() {
+				DotSize = {
+					LINKS_Name = "Dot Size",
+					LINKID_DataType = "Number",
+					INPID_InputControl = "SliderControl",
+					INP_MinScale = 0.001,
+					INP_MaxScale = 0.1,
+					INP_Default = 0.016,
+					ICS_ControlPage = "Dots",
+				},
+				DotCount = {
+					LINKS_Name = "Dot Count",
+					LINKID_DataType = "Number",
+					INPID_InputControl = "SliderControl",
+					INP_Integer = true,
+					INP_MinScale = 2,
+					INP_MaxScale = 200,
+					INP_Default = 50,
+					ICS_ControlPage = "Dots",
+				},
+				LoopFrames = {
+					LINKS_Name = "Speed (frames per loop)",
+					LINKID_DataType = "Number",
+					INPID_InputControl = "SliderControl",
+					INP_Integer = true,
+					INP_MinScale = 10,
+					INP_MaxScale = 600,
+					INP_Default = 150,
+					ICS_ControlPage = "Animation",
+				},
+				Reverse = {
+					LINKS_Name = "Reverse Direction",
+					LINKID_DataType = "Number",
+					INPID_InputControl = "CheckboxControl",
+					INP_Integer = true,
+					INP_Default = 0,
+					ICS_ControlPage = "Animation",
+				},
+				Easing = {
+					LINKS_Name = "Easing",
+					LINKID_DataType = "Number",
+					INPID_InputControl = "ComboControl",
+					INP_Integer = true,
+					INP_Default = 0,
+					ICS_ControlPage = "Animation",
+					{ CCS_AddString = "Linear" },
+					{ CCS_AddString = "Ease In" },
+					{ CCS_AddString = "Ease Out" },
+					{ CCS_AddString = "Ease In-Out" },
+				},
+				GlowEnabled = {
+					LINKS_Name = "Enable Glow",
+					LINKID_DataType = "Number",
+					INPID_InputControl = "CheckboxControl",
+					INP_Integer = true,
+					INP_Default = 1,
+					ICS_ControlPage = "Glow",
+				},
+				BGEnabled = {
+					LINKS_Name = "Enable Background Color",
+					LINKID_DataType = "Number",
+					INPID_InputControl = "CheckboxControl",
+					INP_Integer = true,
+					INP_Default = 0,
+					ICS_ControlPage = "Background",
+				}
+			}
+		}
+	},
+	ActiveTool = "FlowyDots"
+}
