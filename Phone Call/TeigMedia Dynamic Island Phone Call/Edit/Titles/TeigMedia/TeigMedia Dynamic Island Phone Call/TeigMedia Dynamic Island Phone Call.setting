@@ -1,0 +1,2928 @@
+{
+	Tools = ordered() {
+		TeigMediaDynamicIslandPhoneCall = GroupOperator {
+			CtrlWZoom = false,
+			Inputs = ordered() {
+				Mode = InstanceInput {
+					SourceOp = "CustomTool1",
+					Source = "Mode",
+					Page = "Controls",
+					Name = "Mode",
+					Default = 0,
+				},
+				ImportImage = InstanceInput {
+					SourceOp = "Loader5",
+					Source = "Clip",
+					Page = "Controls",
+					Name = "Import Image",
+				},
+				ImagePosition = InstanceInput {
+					SourceOp = "Position_Profile_1",
+					Source = "Center",
+					Page = "Layout",
+					Name = "Image Position",
+				},
+				ImageSize = InstanceInput {
+					SourceOp = "Position_Profile_1",
+					Source = "Size",
+					Page = "Layout",
+					Name = "Image Size",
+					Default = 1.841,
+				},
+				CallerName = InstanceInput {
+					SourceOp = "Instance_Text1",
+					Source = "StyledText",
+					Page = "Controls",
+					Name = "Caller Name",
+				},
+				CallerNameFont = InstanceInput {
+					SourceOp = "Instance_Text1",
+					Source = "Font",
+					Page = "Controls",
+					Name = "Caller Name Font",
+					ControlGroup = 5,
+				},
+				CallerNameStyle = InstanceInput {
+					SourceOp = "Instance_Text1",
+					Source = "Style",
+					Page = "Controls",
+					Name = "Caller Name Font",
+					ControlGroup = 5,
+				},
+				CallerNameSize = InstanceInput {
+					SourceOp = "Instance_Text1",
+					Source = "Size",
+					Page = "Controls",
+					Name = "Caller Name Size",
+					Default = 0.0698,
+				},
+				CallerNamePosition = InstanceInput {
+					SourceOp = "Instance_Text1",
+					Source = "Center",
+					Page = "Layout",
+					Name = "Caller Name Position",
+				},
+				VoiceText = InstanceInput {
+					SourceOp = "Voice_Call",
+					Source = "StyledText",
+					Page = "Controls",
+					Name = "Voice Call Text",
+				},
+				VoiceFont = InstanceInput {
+					SourceOp = "Voice_Call",
+					Source = "Font",
+					Page = "Controls",
+					Name = "Voice Call Font",
+					ControlGroup = 6,
+				},
+				VoiceStyle = InstanceInput {
+					SourceOp = "Voice_Call",
+					Source = "Style",
+					Page = "Controls",
+					Name = "Voice Call Font",
+					ControlGroup = 6,
+				},
+				VoiceSize = InstanceInput {
+					SourceOp = "Voice_Call",
+					Source = "Size",
+					Page = "Controls",
+					Name = "Voice Call Size",
+					Default = 0.04,
+				},
+				VoicePosition = InstanceInput {
+					SourceOp = "Voice_Call",
+					Source = "Center",
+					Page = "Layout",
+					Name = "Voice Call Position",
+				},
+				DurationFont = InstanceInput {
+					SourceOp = "Instance_Text1_1_1_1",
+					Source = "Font",
+					Page = "Controls",
+					Name = "Duration Font",
+					ControlGroup = 7,
+				},
+				DurationStyle = InstanceInput {
+					SourceOp = "Instance_Text1_1_1_1",
+					Source = "Style",
+					Page = "Controls",
+					Name = "Duration Font",
+					ControlGroup = 7,
+				},
+				DurationSize = InstanceInput {
+					SourceOp = "Instance_Text1_1_1_1",
+					Source = "Size",
+					Page = "Controls",
+					Name = "Duration Size",
+					Default = 0.04,
+				},
+				DurationPosition = InstanceInput {
+					SourceOp = "Instance_Text1_1_1_1",
+					Source = "Center",
+					Page = "Layout",
+					Name = "Duration Position",
+				},
+				DeclinePosition = InstanceInput {
+					SourceOp = "Decline",
+					Source = "Center",
+					Page = "Layout",
+					Name = "Decline Position",
+				},
+				DeclineRed = InstanceInput {
+					SourceOp = "Color_Button_Decline",
+					Source = "TopLeftRed",
+					Page = "Colors",
+					Name = "Decline Button",
+					ControlGroup = 1,
+					Default = 1,
+				},
+				DeclineGreen = InstanceInput {
+					SourceOp = "Color_Button_Decline",
+					Source = "TopLeftGreen",
+					Page = "Colors",
+					Name = "Decline Button",
+					ControlGroup = 1,
+					Default = 0.23137255,
+				},
+				DeclineBlue = InstanceInput {
+					SourceOp = "Color_Button_Decline",
+					Source = "TopLeftBlue",
+					Page = "Colors",
+					Name = "Decline Button",
+					ControlGroup = 1,
+					Default = 0.1882353,
+				},
+				AcceptPosition = InstanceInput {
+					SourceOp = "Accept",
+					Source = "Center",
+					Page = "Layout",
+					Name = "Accept Position",
+				},
+				AcceptRed = InstanceInput {
+					SourceOp = "Color_Button_Accept",
+					Source = "TopLeftRed",
+					Page = "Colors",
+					Name = "Accept Button",
+					ControlGroup = 2,
+					Default = 0.20392157,
+				},
+				AcceptGreen = InstanceInput {
+					SourceOp = "Color_Button_Accept",
+					Source = "TopLeftGreen",
+					Page = "Colors",
+					Name = "Accept Button",
+					ControlGroup = 2,
+					Default = 0.78039216,
+				},
+				AcceptBlue = InstanceInput {
+					SourceOp = "Color_Button_Accept",
+					Source = "TopLeftBlue",
+					Page = "Colors",
+					Name = "Accept Button",
+					ControlGroup = 2,
+					Default = 0.34901961,
+				},
+				LightRed = InstanceInput {
+					SourceOp = "Color_LightMode",
+					Source = "cColorRed",
+					Page = "Colors",
+					Name = "Light Mode",
+					ControlGroup = 3,
+					Default = 1,
+				},
+				LightGreen = InstanceInput {
+					SourceOp = "Color_LightMode",
+					Source = "cColorGreen",
+					Page = "Colors",
+					Name = "Light Mode",
+					ControlGroup = 3,
+					Default = 1,
+				},
+				LightBlue = InstanceInput {
+					SourceOp = "Color_LightMode",
+					Source = "cColorBlue",
+					Page = "Colors",
+					Name = "Light Mode",
+					ControlGroup = 3,
+					Default = 1,
+				},
+				DarkRed = InstanceInput {
+					SourceOp = "Color_DarkMode",
+					Source = "cColorRed",
+					Page = "Colors",
+					Name = "Dark Mode",
+					ControlGroup = 4,
+					Default = 0.11764706,
+				},
+				DarkGreen = InstanceInput {
+					SourceOp = "Color_DarkMode",
+					Source = "cColorGreen",
+					Page = "Colors",
+					Name = "Dark Mode",
+					ControlGroup = 4,
+					Default = 0.11764706,
+				},
+				DarkBlue = InstanceInput {
+					SourceOp = "Color_DarkMode",
+					Source = "cColorBlue",
+					Page = "Colors",
+					Name = "Dark Mode",
+					ControlGroup = 4,
+					Default = 0.11764706,
+				},
+				AnswerSeconds = InstanceInput {
+					SourceOp = "TimeSpeed1",
+					Source = "AnswerSeconds",
+					Page = "Controls",
+					Name = "Answer After (sec)",
+					Default = 3,
+				},
+				Speed = InstanceInput {
+					SourceOp = "TimeSpeed1",
+					Source = "Speed",
+					Page = "Controls",
+					Name = "Animation Speed",
+					Default = 1,
+				},
+				TemplatePosition = InstanceInput {
+					SourceOp = "Position",
+					Source = "Center",
+					Page = "Layout",
+					Name = "Template Position",
+				},
+				TemplateSize = InstanceInput {
+					SourceOp = "Position",
+					Source = "Size",
+					Page = "Layout",
+					Name = "Template Size",
+					Default = 1,
+				}
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "Position",
+					Source = "Output",
+				},
+				Output1 = InstanceOutput {
+					SourceOp = "Path1",
+					Source = "Heading",
+				}
+			},
+			ViewInfo = GroupInfo { Pos = { 0, 0 } },
+			Tools = ordered() {
+				Loader5 = Loader {
+					Clips = {
+						Clip {
+							ID = "Clip1",
+							Filename = "Setting:Asset\\profile.png",
+							FormatID = "PNGFormat",
+							StartFrame = -1,
+							LengthSetManually = true,
+							TrimIn = 0,
+							TrimOut = 0,
+							ExtendFirst = 0,
+							ExtendLast = 0,
+							Loop = 0,
+							AspectMode = 0,
+							Depth = 0,
+							TimeCode = 0,
+							GlobalStart = 0,
+							GlobalEnd = 0
+						}
+					},
+					CtrlWShown = false,
+					Inputs = {
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						["Clip1.PNGFormat.PostMultiply"] = Input { Value = 1, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -55, 280.5 } },
+					Colors = { TileColor = { R = 0.584313725490196, G = 0.294117647058824, B = 0.803921568627451 }, }
+				},
+				Position = Transform {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Input = Input {
+							SourceOp = "Merge14",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 3355, 346.5 } },
+					Colors = { TileColor = { R = 0.584313725490196, G = 0.294117647058824, B = 0.803921568627451 }, }
+				},
+				Merge14 = Merge {
+					CtrlWShown = false,
+					Inputs = {
+						Blend = Input {
+							Expression = "math.max(0, math.min(1, (time-(TimeSpeed1.IN_Anim-20))/5))",
+						},
+						Background = Input {
+							SourceOp = "KeyStretcher_3",
+							Source = "Result",
+						},
+						Foreground = Input {
+							SourceOp = "Dissolve2_1_1_1_1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 3135, 346.5 } },
+					Colors = { TileColor = { R = 0.372549019607843, G = 0.6, B = 0.125490196078431 }, }
+				},
+				Merge14Blend = BezierSpline {
+					SplineColor = { Red = 205, Green = 205, Blue = 205 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[55] = { 0, RH = { 56.6666666666667, 0.333333333333333 }, Flags = { Linear = true } },
+						[60] = { 1, LH = { 58.3333333333333, 0.666666666666667 }, Flags = { Linear = true } }
+					}
+				},
+				Dissolve2_1_1_1_1 = Dissolve {
+					Transitions = {
+						[0] = "DFTDissolve"
+					},
+					CtrlWShown = false,
+					Inputs = {
+						Mix = Input { Expression = "CustomTool1.Mode == 0 and 1 or 0", },
+						Background = Input {
+							SourceOp = "Instance_Color_DarkMode_1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Instance_Color_LightMode_1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 3135, 213.526 } },
+					Colors = { TileColor = { R = 0.372549019607843, G = 0.6, B = 0.125490196078431 }, }
+				},
+				TimeSpeed1 = TimeSpeed {
+					CtrlWShown = false,
+					Inputs = {
+						InterpolateBetweenFrames = Input { Value = 0, },
+						SampleSpread = Input { Disabled = true, },
+						Input = Input {
+							SourceOp = "CustomTool1",
+							Source = "Output",
+						},
+						IN_Anim = Input {
+							Value = 75,
+							Expression = "AnswerSeconds*FPS_Frame",
+						},
+						Out_Anim = Input {
+							Value = 100,
+							Expression = "IN_Anim+25",
+						},
+						End_Anim = Input {
+							Value = 150,
+							Expression = "Out_Anim+50",
+						},
+						FPS = Input {
+							Value = 25,
+						Expression = "FPS_Frame",
+						},
+						FPS_Frame = Input {
+							Value = 25,
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 2840.44, 346.5 } },
+					Colors = { TileColor = { R = 0.584313725490196, G = 0.294117647058824, B = 0.803921568627451 }, },
+					UserControls = ordered() { AnswerSeconds = { INP_MaxAllowed = 60, INP_Integer = false, ICS_ControlPage = "Controls", INP_MaxScale = 60, INP_Default = 3, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", INPID_InputControl = "ScrewControl", LINKS_Name = "Answer After (sec)" }, IN_Anim = { INP_Integer = true, LINKID_DataType = "Number", ICS_ControlPage = "Controls", INPID_InputControl = "ScrewControl", LINKS_Name = "IN_Anim", }, Out_Anim = { INP_Integer = true, LINKID_DataType = "Number", ICS_ControlPage = "Controls", INPID_InputControl = "ScrewControl", LINKS_Name = "Out_Anim", }, End_Anim = { INP_Integer = true, LINKID_DataType = "Number", ICS_ControlPage = "Controls", LINKS_Name = "End_Anim", }, FPS = { INP_MaxAllowed = 1000000, INP_Integer = true, INPID_InputControl = "SliderControl", INP_MaxScale = 120, INP_Default = 30, INP_MinScale = 0, INP_MinAllowed = -1000000, LINKID_DataType = "Number", ICS_ControlPage = "Controls", LINKS_Name = "FPS" }, Speed = { INP_MaxAllowed = 5, INP_Integer = false, INPID_InputControl = "ScrewControl", INP_MaxScale = 5, INP_Default = 1, INP_MinScale = 0.25, INP_MinAllowed = 0.25, LINKID_DataType = "Number", INP_External = false, ICS_ControlPage = "Controls", LINKS_Name = "Speed" }, FPS_Frame = { INP_MaxAllowed = 1000000, INP_Integer = true, INPID_InputControl = "SliderControl", INP_MaxScale = 120, INP_Default = 30, INP_MinScale = 0, INP_MinAllowed = -1000000, LINKID_DataType = "Number", ICS_ControlPage = "Controls", LINKS_Name = "FPS_Frame" } }
+				},
+				KeyStretcher_3 = KeyStretcher {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Keyframes = Input {
+							SourceOp = "TimeSpeed1",
+							Source = "Output",
+						},
+						SourceEnd = Input {
+							Value = 150,
+							Expression = "TimeSpeed1.End_Anim",
+						},
+						StretchStart = Input {
+							Value = 75,
+							Expression = "TimeSpeed1.IN_Anim",
+						},
+						StretchEnd = Input {
+							Value = 100,
+							Expression = "TimeSpeed1.Out_Anim",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 2968.84, 346.5 } },
+					Colors = { TileColor = { R = 0.372549019607843, G = 0.6, B = 0.125490196078431 }, }
+				},
+				Instance_Text1_1_1_1 = TextPlus {
+					CtrlWShown = false,
+					SourceOp = "Duration_Call",
+					Inputs = {
+						EffectMask = Input {
+						},
+						SettingsNest = Input {
+						},
+						ImageNest = Input {
+						},
+						["Gamut.ColorSpaceNest"] = Input {
+						},
+						["Gamut.GammaSpaceNest"] = Input {
+						},
+						Layout = Input {
+						},
+						LayoutRotation = Input {
+							Value = 1,
+						},
+						Background = Input {
+						},
+						TransformTransform = Input {
+						},
+						TransformRotation = Input {
+							Value = 1,
+						},
+						TransformPivot = Input {
+						},
+						TransformShear = Input {
+						},
+						TransformSize = Input {
+						},
+						Properties1 = Input {
+						},
+						Opacity1 = Input {
+							Expression = "math.max(0, math.min(1, (comp.RenderEnd-time)/15))^2 * (3 - 2*math.max(0, math.min(1, (comp.RenderEnd-time)/15)))"
+						},
+						Red1 = Input {
+							Value = 0,
+						},
+						Green1 = Input {
+							Value = 0,
+						},
+						Blue1 = Input {
+							Value = 0,
+						},
+						Alpha1 = Input {
+						},
+						Softness1 = Input {
+							Value = 1,
+						},
+						Position1 = Input {
+						},
+						Rotation1 = Input {
+						},
+						PivotNest1 = Input {
+						},
+						Shear1 = Input {
+						},
+						Size1 = Input {
+						},
+						SizeX1 = Input {
+							Expression = "math.max(0, math.min(1, (comp.RenderEnd-time)/15))^2 * (3 - 2*math.max(0, math.min(1, (comp.RenderEnd-time)/15)))"
+						},
+						SizeY1 = Input {
+							Expression = "math.max(0, math.min(1, (comp.RenderEnd-time)/15))^2 * (3 - 2*math.max(0, math.min(1, (comp.RenderEnd-time)/15)))"
+						},
+						TextText = Input {
+						},
+						StyledText = Input {
+							Expression = "(comp.RenderEnd-time > 30 and string.format(\"%02d:%02d\", math.floor(math.max(0,time-(TimeSpeed1.IN_Anim-15))/TimeSpeed1.FPS_Frame/60), math.floor(math.max(0,time-(TimeSpeed1.IN_Anim-15))/TimeSpeed1.FPS_Frame)%60)) or \"End Call\""
+						},
+						TabSpacing = Input {
+						},
+						AdvancedFontControls = Input {
+						},
+						ClearSelectedKerning = Input {
+						},
+						ClearAllKerning = Input {
+						},
+						ClearSelectedPlacement = Input {
+						},
+						ClearAllPlacement = Input {
+						},
+						Internal = Input {
+						},
+						CommentsNest = Input {
+						},
+						FrameRenderScriptNest = Input {
+						},
+						StartRenderScripts = Input {
+						},
+						EndRenderScripts = Input {
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 3298.93, 16.5 } },
+					Version = 1
+				},
+				CustomTool1 = Custom {
+					PassThrough = true,
+					CtrlWShown = false,
+					Inputs = {
+						LUTIn1 = Input {
+							SourceOp = "CustomTool1LUTIn1",
+							Source = "Value",
+						},
+						LUTIn2 = Input {
+							SourceOp = "CustomTool1LUTIn2",
+							Source = "Value",
+						},
+						LUTIn3 = Input {
+							SourceOp = "CustomTool1LUTIn3",
+							Source = "Value",
+						},
+						LUTIn4 = Input {
+							SourceOp = "CustomTool1LUTIn4",
+							Source = "Value",
+						},
+						Image1 = Input {
+							SourceOp = "Merge6",
+							Source = "Output",
+						},
+						image = Input { Value = 1, },
+						High1 = Input { Value = 1, },
+						High2 = Input { Value = 1, },
+						High3 = Input { Value = 1, },
+						High4 = Input { Value = 1, },
+						Global = Input { Value = 1, },
+						CallApps = Input { Value = 4, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 2620.44, 346.5 } },
+					Colors = { TileColor = { R = 0.584313725490196, G = 0.294117647058824, B = 0.803921568627451 }, },
+					UserControls = ordered() { image = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 3, INPID_InputControl = "LabelControl", ICS_ControlPage = "Controls", LINKS_Name = "image", }, High1 = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 5, INPID_InputControl = "LabelControl", ICS_ControlPage = "Controls", LINKS_Name = "High1", }, High2 = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 13, INPID_InputControl = "LabelControl", ICS_ControlPage = "Controls", LINKS_Name = "High2", }, High3 = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 11, INPID_InputControl = "LabelControl", ICS_ControlPage = "Controls", LINKS_Name = "High3", }, High4 = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 11, INPID_InputControl = "LabelControl", ICS_ControlPage = "Controls", LINKS_Name = "High4", }, Global = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 7, INPID_InputControl = "LabelControl", ICS_ControlPage = "Controls", LINKS_Name = "Global", }, CallApps = { { MBTNC_AddButton = "Whatsapp" }, { MBTNC_AddButton = "Telegram" }, { MBTNC_AddButton = "Facebook" }, { MBTNC_AddButton = "Instagram" }, { MBTNC_AddButton = "Phone" }, INPID_InputControl = "MultiButtonControl", INP_Integer = false, MBTNC_StretchToFit = true, LINKID_DataType = "Number", MBTNC_ShowName = true, MBTNC_ShowBasicButton = true, MBTNC_ShowToolTip = true, LINKS_Name = "Call Apps", }, Mode = { { MBTNC_AddButton = "Dark Mode" }, { MBTNC_AddButton = "Light Mode" }, INPID_InputControl = "MultiButtonControl", INP_Integer = false, MBTNC_StretchToFit = true, LINKID_DataType = "Number", MBTNC_ShowName = true, MBTNC_ShowBasicButton = true, MBTNC_ShowToolTip = true, LINKS_Name = "Mode", } }
+				},
+				CustomTool1LUTIn1 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 204, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				CustomTool1LUTIn2 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 204, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				CustomTool1LUTIn3 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 204 },
+					CtrlWZoom = false,
+				},
+				CustomTool1LUTIn4 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 204, Green = 204, Blue = 204 },
+					CtrlWZoom = false,
+				},
+				Instance_Color_LightMode_1 = ofx.com.blackmagicdesign.openfx.ColorGeneratorPlugin {
+					CtrlWShown = false,
+					NameSet = true,
+					SourceOp = "Color_LightMode",
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Duration_Call",
+							Source = "Output",
+						},
+						SettingsNest = Input {
+						},
+						Source = Input {
+							SourceOp = "Duration_Call",
+							Source = "Output",
+						},
+						blendGroup = Input {
+							Value = 0,
+						},
+						CommentsNest = Input {
+						},
+						FrameRenderScriptNest = Input {
+						},
+						StartRenderScripts = Input {
+						},
+						EndRenderScripts = Input {
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 3135, 116.559 } },
+					Colors = { TileColor = { R = 0.372549019607843, G = 0.6, B = 0.125490196078431 }, }
+				},
+				Duration_Call = TextPlus {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						Center = Input { Value = { 0.2067192467815, 0.568741563382 }, },
+						LayoutRotation = Input { Value = 1, },
+						TransformRotation = Input { Value = 1, },
+						Opacity1 = Input { Expression = "math.max(0, math.min(1, (comp.RenderEnd-time)/15))^2 * (3 - 2*math.max(0, math.min(1, (comp.RenderEnd-time)/15)))", },
+						Red1 = Input { Value = 0.2, },
+						Green1 = Input { Value = 0.78, },
+						Blue1 = Input { Value = 0.35, },
+						Softness1 = Input { Value = 1, },
+						Size1 = Input { Value = 1, },
+						SizeX1 = Input { Expression = "math.max(0, math.min(1, (comp.RenderEnd-time)/15))^2 * (3 - 2*math.max(0, math.min(1, (comp.RenderEnd-time)/15)))", },
+						SizeY1 = Input { Expression = "math.max(0, math.min(1, (comp.RenderEnd-time)/15))^2 * (3 - 2*math.max(0, math.min(1, (comp.RenderEnd-time)/15)))", },
+						StyledText = Input {
+							Value = StyledText {
+								Value = "00:05"
+							},
+							Expression = "(comp.RenderEnd-time > 30 and string.format(\"%02d:%02d\", math.floor(math.max(0,time-(TimeSpeed1.IN_Anim-15))/TimeSpeed1.FPS_Frame/60), math.floor(math.max(0,time-(TimeSpeed1.IN_Anim-15))/TimeSpeed1.FPS_Frame)%60)) or \"End Call\"",
+						},
+						Font = Input { Value = "SF Pro", },
+						Style = Input { Value = "Regular", },
+						Size = Input { Value = 0.04, },
+						VerticalTopCenterBottom = Input { Value = -1, },
+						VerticalJustificationNew = Input { Value = 3, },
+						HorizontalLeftCenterRight = Input { Value = -1, },
+						HorizontalJustificationNew = Input { Value = 3, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 3135, 16.5 } },
+					Colors = { TileColor = { R = 0.584313725490196, G = 0.294117647058824, B = 0.803921568627451 }, },
+					Version = 1
+				},
+				Instance_Color_DarkMode_1 = ofx.com.blackmagicdesign.openfx.ColorGeneratorPlugin {
+					CtrlWShown = false,
+					NameSet = true,
+					SourceOp = "Color_DarkMode",
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Instance_Text1_1_1_1",
+							Source = "Output",
+						},
+						SettingsNest = Input {
+						},
+						Source = Input {
+							SourceOp = "Instance_Text1_1_1_1",
+							Source = "Output",
+						},
+						blendGroup = Input {
+							Value = 0,
+						},
+						CommentsNest = Input {
+						},
+						FrameRenderScriptNest = Input {
+						},
+						StartRenderScripts = Input {
+						},
+						EndRenderScripts = Input {
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 3300, 82.5 } },
+					Colors = { TileColor = { R = 0.372549019607843, G = 0.6, B = 0.125490196078431 }, }
+				},
+				Merge6 = Merge {
+					CtrlWShown = false,
+					Inputs = {
+						Blend = Input {
+							Expression = "1-math.max(0, math.min(1, (time-(TimeSpeed1.IN_Anim+65))/10))",
+						},
+						Background = Input {
+							SourceOp = "Background3",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Anim",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 2493.94, 348.918 } },
+					Colors = { TileColor = { R = 0.372549019607843, G = 0.6, B = 0.125490196078431 }, }
+				},
+				Merge6Blend = BezierSpline {
+					SplineColor = { Red = 205, Green = 205, Blue = 205 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[140] = { 1, RH = { 143.333333333333, 1 } },
+						[150] = { 0, LH = { 146.666666666667, 0 } }
+					}
+				},
+				Anim = Transform {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Pivot = Input { Value = { 0.5, 0.53 }, },
+						Size = Input {
+							Expression = "0.001 + 0.999 * (math.max(0, math.min(1,time*TimeSpeed1.Speed/10))^2 * (3 - 2*math.max(0, math.min(1,time*TimeSpeed1.Speed/10))))",
+						},
+						Input = Input {
+							SourceOp = "Merge10",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 2379.29, 347.022 } },
+					Colors = { TileColor = { R = 0.372549019607843, G = 0.6, B = 0.125490196078431 }, }
+				},
+				AnimSize = BezierSpline {
+					SplineColor = { Red = 225, Green = 0, Blue = 225 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0.004, RH = { 1.6340358352117, 1.13985417813497 } },
+						[10] = { 1, LH = { 6.6666666666667, 1 } }
+					}
+				},
+				Background3 = Background {
+					CtrlWShown = false,
+					Inputs = {
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftAlpha = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 2493.94, 282.918 } },
+					Colors = { TileColor = { R = 0.372549019607843, G = 0.6, B = 0.125490196078431 }, }
+				},
+				Merge11 = Merge {
+					CtrlWShown = false,
+					Inputs = {
+						Background = Input {
+							SourceOp = "Color_Button_Accept",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Transform5",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 1870, 280.5 } },
+					Colors = { TileColor = { R = 0.372549019607843, G = 0.6, B = 0.125490196078431 }, }
+				},
+				Merge10 = Merge {
+					CtrlWShown = false,
+					Inputs = {
+						Blend = Input {
+							Expression = "1-math.max(0, math.min(1, (time-(TimeSpeed1.IN_Anim-25))/5))",
+						},
+						Background = Input {
+							SourceOp = "Merge13",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Merge11",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 1870, 346.5 } },
+					Colors = { TileColor = { R = 0.372549019607843, G = 0.6, B = 0.125490196078431 }, }
+				},
+				Merge10Blend = BezierSpline {
+					SplineColor = { Red = 205, Green = 205, Blue = 205 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[50] = { 1, RH = { 51.6666666666667, 0.666666666666667 }, Flags = { Linear = true } },
+						[55] = { 0, LH = { 53.3333333333333, 0.333333333333333 }, Flags = { Linear = true } }
+					}
+				},
+				Dissolve7 = Dissolve {
+					Transitions = {
+						[0] = "DFTDissolve"
+					},
+					CtrlWShown = false,
+					Inputs = {
+						Blend = Input { Value = 0, },
+						ProcessLayers = Input { Value = FuID { ":All" }, },
+						Background = Input {
+							SourceOp = "Merge20",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Merge16",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 2035, 181.5 } },
+				},
+				Transform5 = Transform {
+					CtrlWShown = false,
+					Inputs = {
+						Center = Input { Value = { 0.9019908027061, 0.5 }, },
+						Size = Input { Value = 0.05, },
+						Input = Input {
+							SourceOp = "Dissolve7",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 2035, 214.5 } },
+				},
+				PhoneDownSVG = GroupOperator {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = ordered() {
+						Red = InstanceInput {
+							SourceOp = "Background6",
+							Source = "TopLeftRed",
+						},
+						Green = InstanceInput {
+							SourceOp = "Background6",
+							Source = "TopLeftGreen",
+						},
+						Blue = InstanceInput {
+							SourceOp = "Background6",
+							Source = "TopLeftBlue",
+						},
+						Alpha = InstanceInput {
+							SourceOp = "Background6",
+							Source = "TopLeftAlpha",
+						},
+						UseFrameFormatSettings = InstanceInput {
+							SourceOp = "Background6",
+							Source = "UseFrameFormatSettings",
+						},
+						Width = InstanceInput {
+							SourceOp = "Background6",
+							Source = "Width",
+						},
+						Height = InstanceInput {
+							SourceOp = "Background6",
+							Source = "Height",
+						},
+						Depth = InstanceInput {
+							SourceOp = "Background6",
+							Source = "Depth",
+						}
+					},
+					Outputs = {
+						Output1 = InstanceOutput {
+							SourceOp = "Merge16",
+							Source = "Output",
+						}
+					},
+					ViewInfo = GroupInfo { Pos = { 1870, 16.5 } },
+					Tools = ordered() {
+						Merge16 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Background = Input {
+									SourceOp = "Background6",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "Merge15",
+									Source = "Output",
+								},
+								Width = InstanceInput {
+									SourceOp = "Background6",
+									Source = "Width",
+								},
+								Height = InstanceInput {
+									SourceOp = "Background6",
+									Source = "Height",
+								},
+								UseFrameFormatSettings = InstanceInput {
+									SourceOp = "Background6",
+									Source = "UseFrameFormatSettings",
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { 110, 41.7576 } },
+						},
+						Background6 = Background {
+							CtrlWShown = false,
+							Inputs = {
+								Width = Input { Value = 3840, },
+								Height = Input { Value = 1398, },
+								TopLeftAlpha = Input { Value = 0, }
+							},
+							ViewInfo = OperatorInfo { Pos = { 110, 8.75758 } },
+						},
+						Merge15 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Background = Input {
+									SourceOp = "Background4",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "Background5",
+									Source = "Output",
+								},
+								Width = InstanceInput {
+									SourceOp = "Background6",
+									Source = "Width",
+								},
+								Height = InstanceInput {
+									SourceOp = "Background6",
+									Source = "Height",
+								},
+								UseFrameFormatSettings = InstanceInput {
+									SourceOp = "Background6",
+									Source = "UseFrameFormatSettings",
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { 0, 74.7576 } },
+						},
+						Background5 = Background {
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "path2",
+									Source = "Mask",
+								},
+								Width = InstanceInput {
+									SourceOp = "Background6",
+									Source = "Width",
+								},
+								Height = InstanceInput {
+									SourceOp = "Background6",
+									Source = "Height",
+								},
+								UseFrameFormatSettings = InstanceInput {
+									SourceOp = "Background6",
+									Source = "UseFrameFormatSettings",
+								},
+								Depth = InstanceInput {
+									SourceOp = "Background6",
+									Source = "Depth",
+								},
+								TopLeftRed = Input { Value = 1, },
+								TopLeftGreen = Input { Value = 1, },
+								TopLeftBlue = Input { Value = 1, }
+							},
+							ViewInfo = OperatorInfo { Pos = { 0, 49.5 } },
+						},
+						path2 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								JoinStyle = Input { Value = 2, },
+								MiterLimit = Input { Value = 4, },
+								CapStyle = Input { Value = 0, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Closed = true,
+										Points = {
+											{ X = 0.000271837006530773, Y = 0.5, LX = 0.164947297600359, LY = 0, RX = -0.165134525338607, RY = 0 },
+											{ X = -0.444306034101952, Y = 0.157764125928969, LX = 0.0917473682779805, LY = 0.258564066176196, RX = -0.0345846670336467, RY = -0.0965268700750644 },
+											{ X = -0.5, Y = -0.213702991373193, LX = 0, LY = 0.152462934608059, RX = 0, RY = -0.102859730365612 },
+											{ X = -0.448461062746777, Y = -0.484604324606939, LX = -0.0397379491257042, LY = 0.0210721888187623, RX = 0.0133393817067287, RY = -0.0164786944019123 },
+											{ X = -0.402154308276757, Y = -0.489440564663704, LX = -0.0189949506276037, LY = -0.00812264256638151, RX = 0.0414330567391792, RY = 0.0190038714817442 },
+											{ Linear = true, X = -0.27785513805922, Y = -0.432428950218471, LX = -0.0414330567391792, LY = -0.0190038714817442, RX = 0.042577150740416, RY = 0.0199910370840647 },
+											{ X = -0.202656866942581, Y = -0.253357358927438, LX = -0.0112717214758031, LY = -0.114546999290436, RX = 0.00679162107733539, RY = 0.0682155705767388 },
+											{ Linear = true, X = -0.182282003710575, Y = -0.0487106471972214, LX = -0.00679162107733544, LY = -0.0682155705767388, RX = 0.0039963437922621, RY = 0.0409661276468611 },
+											{ X = -0.156306278755258, Y = 0.0252446129140682, LX = -0.0175898931000971, LY = -0.0179248982335587, RX = 0.0344485446526264, RY = 0.0335054337677858 },
+											{ X = 0.000271837006530773, Y = 0.0772388617096763, LX = -0.0674087816944959, LY = -0.000516301303357336, RX = 0.0674121796570777, RY = 0.000516301303357392 },
+											{ X = 0.15666306482633, Y = 0.0252446129140682, LX = -0.0344485446526263, LY = 0.0335054337677858, RX = 0.0172310682514765, RY = -0.0179248982335587 },
+											{ X = 0.182280304729284, Y = -0.0487106471972214, LX = -0.00399600399600397, LY = 0.0409661276468611, RX = 0.00691145589104769, RY = -0.0682155705767388 },
+											{ Linear = true, X = 0.203014672402427, Y = -0.253357358927438, LX = -0.00691145589104769, LY = 0.0682155705767388, RX = 0.0114613277878584, RY = -0.114546999290436 },
+											{ X = 0.278401870238605, Y = -0.432428950218471, LX = -0.0431235431235432, LY = 0.0199910370840647, RX = 0.0412501330868679, RY = -0.0190038714817442 },
+											{ Linear = true, X = 0.402152269499208, Y = -0.489440564663704, LX = -0.0412501330868679, LY = 0.0190038714817442, RX = 0.0189946108313455, RY = -0.00812264256638151 },
+											{ X = 0.448646591503734, Y = -0.484604324606939, LX = -0.0129802170618496, LY = -0.0164786944019123, RX = 0.040099356425887, RY = 0.0210721888187623 },
+											{ X = 0.5, Y = -0.213702991373193, LX = 0, LY = -0.102859730365612, RX = 0, RY = 0.152462934608059 },
+											{ X = 0.444494281228975, Y = 0.157764125928969, LX = 0.0347543612849736, LY = -0.0965268700750644, RX = -0.0913882036331015, RY = 0.258564066176196 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { 0, 8.75758 } },
+						},
+						Background4 = Background {
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "path1",
+									Source = "Mask",
+								},
+								Width = InstanceInput {
+									SourceOp = "Background6",
+									Source = "Width",
+								},
+								Height = InstanceInput {
+									SourceOp = "Background6",
+									Source = "Height",
+								},
+								UseFrameFormatSettings = InstanceInput {
+									SourceOp = "Background6",
+									Source = "UseFrameFormatSettings",
+								},
+								Depth = InstanceInput {
+									SourceOp = "Background6",
+									Source = "Depth",
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -110, 41.7576 } },
+						},
+						path1 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								Level = Input { Value = 0, },
+								JoinStyle = Input { Value = 2, },
+								MiterLimit = Input { Value = 4, },
+								CapStyle = Input { Value = 0, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Closed = true,
+										Points = {
+											{ Linear = true, X = -0.5, Y = 0.5, LX = 0, LY = -0.333333333333333, RX = 0.333333333333333, RY = 0 },
+											{ Linear = true, X = 0.5, Y = 0.5, LX = -0.333333333333333, LY = 0, RX = 0, RY = -0.333333333333333 },
+											{ Linear = true, X = 0.5, Y = -0.5, LX = 0, LY = 0.333333333333333, RX = -0.333333333333333, RY = 0 },
+											{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0, RX = 0, RY = 0.333333333333333 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -110, 8.75758 } },
+						}
+					},
+					UserControls = ordered() { Color = ControlPage { CTID_DIB_ID = "Icons.Tools.Tabs.Color" }, BackgroundNest = BeginNest { ICS_ControlPage = "Color", LINKS_Name = "Background", }, Red = InstanceInput { Source = "TopLeftRed", ICS_ControlPage = "Color", SourceOp = "Background6", INP_Default = 0, }, Green = InstanceInput { Source = "TopLeftGreen", ICS_ControlPage = "Color", SourceOp = "Background6", INP_Default = 0, }, Blue = InstanceInput { Source = "TopLeftBlue", ICS_ControlPage = "Color", SourceOp = "Background6", INP_Default = 0, }, Alpha = InstanceInput { Source = "TopLeftAlpha", ICS_ControlPage = "Color", SourceOp = "Background6", INP_Default = 0, }, EndBackgroundNest = EndNest {
+						}, Image = ControlPage { CTID_DIB_ID = "Icons.Tools.Tabs.Image" }, ImageNest = BeginNest { ICS_ControlPage = "Image", LINKS_Name = "Image", }, UseFrameFormatSettings = InstanceInput { SourceOp = "Background6", Source = "UseFrameFormatSettings", ICS_ControlPage = "Image", }, Width = InstanceInput { Source = "Width", ICS_ControlPage = "Image", SourceOp = "Background6", INP_Default = 3840, }, Height = InstanceInput { Source = "Height", ICS_ControlPage = "Image", SourceOp = "Background6", INP_Default = 1398, }, Depth = InstanceInput { SourceOp = "Background6", Source = "Depth", ICS_ControlPage = "Image", }, EndImageNest = EndNest {
+						} }
+				},
+				Accept = TextPlus {
+					CtrlWShown = false,
+					NameSet = true,
+					SourceOp = "Decline",
+					Inputs = {
+						EffectMask = Input {
+						},
+						SettingsNest = Input {
+						},
+						ImageNest = Input {
+						},
+						["Gamut.ColorSpaceNest"] = Input {
+						},
+						["Gamut.GammaSpaceNest"] = Input {
+						},
+						Layout = Input {
+						},
+						Center = Input {
+							Value = { 0.86, 0.5 },
+						},
+						LayoutRotation = Input {
+							Value = 1,
+						},
+						Background = Input {
+						},
+						TransformTransform = Input {
+						},
+						TransformRotation = Input {
+							Value = 1,
+						},
+						TransformPivot = Input {
+						},
+						TransformShear = Input {
+						},
+						TransformSize = Input {
+						},
+						Properties1 = Input {
+						},
+						Softness1 = Input {
+							Value = 1,
+						},
+						Position1 = Input {
+						},
+						Rotation1 = Input {
+						},
+						PivotNest1 = Input {
+						},
+						Shear1 = Input {
+						},
+						Size1 = Input {
+						},
+						TextText = Input {
+						},
+						StyledText = Input {
+						},
+						TabSpacing = Input {
+						},
+						AdvancedFontControls = Input {
+						},
+						ClearSelectedKerning = Input {
+						},
+						ClearAllKerning = Input {
+						},
+						ClearSelectedPlacement = Input {
+						},
+						ClearAllPlacement = Input {
+						},
+						Internal = Input {
+						},
+						CommentsNest = Input {
+						},
+						FrameRenderScriptNest = Input {
+						},
+						StartRenderScripts = Input {
+						},
+						EndRenderScripts = Input {
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 2035, 280.5 } },
+					Colors = { TileColor = { R = 0.584313725490196, G = 0.294117647058824, B = 0.803921568627451 }, },
+					Version = 1
+				},
+				speakerwave3fill = GroupOperator {
+					CtrlWZoom = false,
+					CtrlWShown = false,
+					Inputs = ordered() {
+						Red = InstanceInput {
+							SourceOp = "Background15",
+							Source = "TopLeftRed",
+						},
+						Green = InstanceInput {
+							SourceOp = "Background15",
+							Source = "TopLeftGreen",
+						},
+						Blue = InstanceInput {
+							SourceOp = "Background15",
+							Source = "TopLeftBlue",
+						},
+						Alpha = InstanceInput {
+							SourceOp = "Background15",
+							Source = "TopLeftAlpha",
+						},
+						UseFrameFormatSettings = InstanceInput {
+							SourceOp = "Background15",
+							Source = "UseFrameFormatSettings",
+						},
+						Width = InstanceInput {
+							SourceOp = "Background15",
+							Source = "Width",
+						},
+						Height = InstanceInput {
+							SourceOp = "Background15",
+							Source = "Height",
+						},
+						Depth = InstanceInput {
+							SourceOp = "Background15",
+							Source = "Depth",
+						}
+					},
+					Outputs = {
+						Output1 = InstanceOutput {
+							SourceOp = "Merge23",
+							Source = "Output",
+						}
+					},
+					ViewInfo = GroupInfo { Pos = { 1870, -16.5 } },
+					Tools = ordered() {
+						path11 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								Level = Input { Value = 0, },
+								JoinStyle = Input { Value = 2, },
+								MiterLimit = Input { Value = 4, },
+								CapStyle = Input { Value = 0, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Closed = true,
+										Points = {
+											{ Linear = true, X = -0.5, Y = 0.5, LX = 0, LY = -0.333333333333333, RX = 0.333333333333333, RY = 0 },
+											{ Linear = true, X = 0.5, Y = 0.5, LX = -0.333333333333333, LY = 0, RX = 0, RY = -0.333333333333333 },
+											{ Linear = true, X = 0.5, Y = -0.5, LX = 0, LY = 0.333333333333333, RX = -0.333333333333333, RY = 0 },
+											{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0, RX = 0, RY = 0.333333333333333 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -275, 8.75758 } },
+						},
+						Background7 = Background {
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "path11",
+									Source = "Mask",
+								},
+								Width = InstanceInput {
+									SourceOp = "Background15",
+									Source = "Width",
+								},
+								Height = InstanceInput {
+									SourceOp = "Background15",
+									Source = "Height",
+								},
+								UseFrameFormatSettings = InstanceInput {
+									SourceOp = "Background15",
+									Source = "UseFrameFormatSettings",
+								},
+								Depth = InstanceInput {
+									SourceOp = "Background15",
+									Source = "Depth",
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -275, 41.7576 } },
+						},
+						path21 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								Level = Input { Value = 0.85, },
+								JoinStyle = Input { Value = 2, },
+								MiterLimit = Input { Value = 4, },
+								CapStyle = Input { Value = 0, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Closed = true,
+										Points = {
+											{ X = 0.357102890611604, Y = -0.492954204389914, LX = -0.0118073166256043, LY = 0.0113746928544337, RX = 0.0115064932720857, RY = -0.0113746928544335 },
+											{ X = 0.392855746177287, Y = -0.482016524019196, LX = -0.00845012800033684, LY = -0.0179422483880011, RX = 0.0652425689111098, RY = 0.132229258398061 },
+											{ X = 0.5, Y = 0.000329820742426545, LX = 0, LY = -0.188158610795033, RX = 0, RY = 0.188160672174673 },
+											{ X = 0.392855746177287, Y = 0.482677443559425, LX = 0.064291967113991, LY = -0.132663013901944, RX = -0.00845012800033684, RY = 0.0183776818549118 },
+											{ X = 0.357102890611604, Y = 0.493617061627006, LX = 0.0115064932720857, LY = 0.0113746516268408, RX = -0.0118073166256043, RY = -0.0113746516268408 },
+											{ X = 0.352310774590053, Y = 0.442627681854912, LX = -0.00893445359950185, LY = 0.0186056415837992, RX = 0.0585462410617862, RY = -0.121288279819918 },
+											{ X = 0.450186660890858, Y = 0.000329820742426545, LX = 0, LY = 0.173719470967529, RX = 0, RY = -0.173283695311598 },
+											{ X = 0.352310774590053, Y = -0.441968040370059, LX = 0.0585462410617862, LY = 0.120854565543627, RX = -0.00893445359950185, RY = -0.018601889872854 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -165, 8.75758 } },
+						},
+						Background8 = Background {
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "path21",
+									Source = "Mask",
+								},
+								Width = InstanceInput {
+									SourceOp = "Background15",
+									Source = "Width",
+								},
+								Height = InstanceInput {
+									SourceOp = "Background15",
+									Source = "Height",
+								},
+								UseFrameFormatSettings = InstanceInput {
+									SourceOp = "Background15",
+									Source = "UseFrameFormatSettings",
+								},
+								Depth = InstanceInput {
+									SourceOp = "Background15",
+									Source = "Depth",
+								},
+								TopLeftRed = Input { Value = 1, },
+								TopLeftGreen = Input { Value = 1, },
+								TopLeftBlue = Input { Value = 1, }
+							},
+							ViewInfo = OperatorInfo { Pos = { -165, 41.7576 } },
+						},
+						Merge17 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Background = Input {
+									SourceOp = "Background7",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "Background8",
+									Source = "Output",
+								},
+								Gain = Input { Value = 0, },
+								Width = InstanceInput {
+									SourceOp = "Background15",
+									Source = "Width",
+								},
+								Height = InstanceInput {
+									SourceOp = "Background15",
+									Source = "Height",
+								},
+								UseFrameFormatSettings = InstanceInput {
+									SourceOp = "Background15",
+									Source = "UseFrameFormatSettings",
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -165, 74.7576 } },
+						},
+						path3 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								Level = Input { Value = 0.85, },
+								JoinStyle = Input { Value = 2, },
+								MiterLimit = Input { Value = 4, },
+								CapStyle = Input { Value = 0, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Closed = true,
+										Points = {
+											{ X = 0.219485231077459, Y = -0.355010801629314, LX = -0.0119757777035746, LY = 0.011168554890417, RX = 0.0121382223144747, RY = -0.0109376803707185 },
+											{ X = 0.255087674966383, Y = -0.345396526987582, LX = -0.00878404192274251, LY = -0.0172784841438678, RX = 0.0485498810243638, RY = 0.0898926433483404 },
+											{ X = 0.333031005863047, Y = 0.000329820742426545, LX = 0, LY = -0.128910437177394, RX = 0, RY = 0.12891332310889 },
+											{ X = 0.255087674966383, Y = 0.346056993024291, LX = 0.0488657455455582, LY = -0.0890206797605501, RX = -0.00878404192274251, RY = 0.0172797209716519 },
+											{ X = 0.219485231077459, Y = 0.355670443114167, LX = 0.0121382223144747, LY = 0.0109397417503587, RX = -0.0119757777035746, RY = -0.0111677303385609 },
+											{ X = 0.215024020744778, Y = 0.305343920579165, LX = -0.00958423204310188, LY = 0.0186060126321344, RX = 0.0433215711402108, RY = -0.0821228912086281 },
+											{ X = 0.282582929477981, Y = 0.000329820742426545, LX = 0, LY = 0.113809182209469, RX = 0, RY = -0.113808769933541 },
+											{ X = 0.215024020744778, Y = -0.304684279094312, LX = 0.0426868338642866, LY = 0.0825582545886311, RX = -0.00926836752190741, RY = -0.0186018898728542 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 8.75758 } },
+						},
+						Background9 = Background {
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "path3",
+									Source = "Mask",
+								},
+								Width = InstanceInput {
+									SourceOp = "Background15",
+									Source = "Width",
+								},
+								Height = InstanceInput {
+									SourceOp = "Background15",
+									Source = "Height",
+								},
+								UseFrameFormatSettings = InstanceInput {
+									SourceOp = "Background15",
+									Source = "UseFrameFormatSettings",
+								},
+								Depth = InstanceInput {
+									SourceOp = "Background15",
+									Source = "Depth",
+								},
+								TopLeftRed = Input { Value = 1, },
+								TopLeftGreen = Input { Value = 1, },
+								TopLeftBlue = Input { Value = 1, }
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 41.7576 } },
+						},
+						Merge18 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Background = Input {
+									SourceOp = "Merge17",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "Background9",
+									Source = "Output",
+								},
+								Gain = Input { Value = 0, },
+								Width = InstanceInput {
+									SourceOp = "Background15",
+									Source = "Width",
+								},
+								Height = InstanceInput {
+									SourceOp = "Background15",
+									Source = "Height",
+								},
+								UseFrameFormatSettings = InstanceInput {
+									SourceOp = "Background15",
+									Source = "UseFrameFormatSettings",
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 74.7576 } },
+						},
+						path4 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								Level = Input { Value = 0.85, },
+								JoinStyle = Input { Value = 2, },
+								MiterLimit = Input { Value = 4, },
+								CapStyle = Input { Value = 0, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Closed = true,
+										Points = {
+											{ X = 0.0833325812749496, Y = -0.219256584046571, LX = -0.0127609266562583, LY = 0.0129042365474366, RX = 0.011187620517356, RY = -0.010071900921849 },
+											{ X = 0.118300287887949, Y = -0.209209419680404, LX = -0.0087840419227424, LY = -0.0170517323834495, RX = 0.029029453614543, RY = 0.052363165619486 },
+											{ X = 0.165595735528141, Y = 0.000329820742426545, LX = 0, LY = -0.0812101123039629, RX = 0, RY = 0.0812101123039627 },
+											{ X = 0.118300287887949, Y = 0.209871534820825, LX = 0.029029453614543, LY = -0.0527993535513449, RX = -0.0087840419227424, RY = 0.0170517323834496 },
+											{ X = 0.0833325812749496, Y = 0.219484984910701, LX = 0.011187620517356, LY = 0.0105043783703557, RX = -0.0127609266562583, RY = -0.0124725836507858 },
+											{ X = 0.078387045343104, Y = 0.166755305991194, LX = -0.0100535164745909, LY = 0.0186056003562064, RX = 0.0241500988204716, RY = -0.0448663401441317 },
+											{ X = 0.115147659143075, Y = 0.000329820742426545, LX = 0, LY = 0.0640965385313083, RX = 0, RY = -0.0640965385313082 },
+											{ X = 0.078387045343104, Y = -0.166093603126701, LX = 0.023831226065742, LY = 0.0453008789722786, RX = -0.00973464371986132, RY = -0.0190389023565692 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { 55, 8.75758 } },
+						},
+						Background13 = Background {
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "path4",
+									Source = "Mask",
+								},
+								Width = InstanceInput {
+									SourceOp = "Background15",
+									Source = "Width",
+								},
+								Height = InstanceInput {
+									SourceOp = "Background15",
+									Source = "Height",
+								},
+								UseFrameFormatSettings = InstanceInput {
+									SourceOp = "Background15",
+									Source = "UseFrameFormatSettings",
+								},
+								Depth = InstanceInput {
+									SourceOp = "Background15",
+									Source = "Depth",
+								},
+								TopLeftRed = Input { Value = 1, },
+								TopLeftGreen = Input { Value = 1, },
+								TopLeftBlue = Input { Value = 1, }
+							},
+							ViewInfo = OperatorInfo { Pos = { 55, 41.7576 } },
+						},
+						Merge21 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Background = Input {
+									SourceOp = "Merge18",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "Background13",
+									Source = "Output",
+								},
+								Gain = Input { Value = 0, },
+								Width = InstanceInput {
+									SourceOp = "Background15",
+									Source = "Width",
+								},
+								Height = InstanceInput {
+									SourceOp = "Background15",
+									Source = "Height",
+								},
+								UseFrameFormatSettings = InstanceInput {
+									SourceOp = "Background15",
+									Source = "UseFrameFormatSettings",
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { 55, 82.5 } },
+						},
+						path5 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								Level = Input { Value = 0.85, },
+								JoinStyle = Input { Value = 2, },
+								MiterLimit = Input { Value = 4, },
+								CapStyle = Input { Value = 0, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Closed = true,
+										Points = {
+											{ X = -0.0947548440080501, Y = -0.45219248338528, LX = -0.0160248600419348, LY = 0, RX = 0.0226189079510621, RY = 0 },
+											{ X = -0.0564720640392755, Y = -0.398794505186431, LX = 0, LY = -0.0307475387127099, RX = 0, RY = 0.265068410318992 },
+											{ Linear = true, X = -0.0564720640392755, Y = 0.396410725770544, LX = 0, LY = -0.265068410318992, RX = 0, RY = 0.0303138244364188 },
+											{ X = -0.0953895812839742, Y = 0.451982222661983, LX = 0.0232536452269863, LY = 0, RX = -0.0160248600419348, RY = 0 },
+											{ X = -0.13959557308353, Y = 0.420405597057999, LX = 0.0166144738148312, LY = 0.0216721087089167, RX = -0.0547253833742954, RY = -0.0709812716788425 },
+											{ Linear = true, X = -0.303771723206416, Y = 0.207461782021471, LX = 0.0547253833742954, LY = 0.0709812716788425, RX = -0.00260121953787518, RY = -0.00356453767377429 },
+											{ X = -0.314342054202352, Y = 0.201908012994937, LX = 0.00440074483862329, LY = 0, RX = -0.0370955304668878, RY = 0 },
+											{ Linear = true, X = -0.425628645603015, Y = 0.201908012994937, LX = 0.0370955304668878, LY = 0, RX = -0.0469893297956507, RY = 0 },
+											{ X = -0.5, Y = 0.0960668876465641, LX = 0, LY = 0.068314121275087, RX = 0, RY = -0.065019486908865 },
+											{ Linear = true, X = -0.5, Y = -0.0989915730800309, LX = 0, LY = 0.0650194869088649, RX = 0, RY = -0.0676503570309537 },
+											{ X = -0.425628645603015, Y = -0.204604297564274, LX = -0.0469893297956507, LY = 0, RX = 0.0370955304668878, RY = 0 },
+											{ Linear = true, X = -0.314342054202352, Y = -0.204604297564274, LX = -0.0370955304668878, LY = 0, RX = 0.00440074483862329, RY = 0 },
+											{ X = -0.303771723206416, Y = -0.209951516350863, LX = -0.00260121953787518, LY = 0.00356618677748644, RX = 0.0547253833742954, RY = -0.0710145286037039 },
+											{ Linear = true, X = -0.13959557308353, Y = -0.422995102161975, LX = -0.0547253833742954, LY = 0.0710145286037039, RX = 0.0153449992629828, RY = -0.0197274031563844 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { 165, 8.75758 } },
+						},
+						Background14 = Background {
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "path5",
+									Source = "Mask",
+								},
+								Width = InstanceInput {
+									SourceOp = "Background15",
+									Source = "Width",
+								},
+								Height = InstanceInput {
+									SourceOp = "Background15",
+									Source = "Height",
+								},
+								UseFrameFormatSettings = InstanceInput {
+									SourceOp = "Background15",
+									Source = "UseFrameFormatSettings",
+								},
+								Depth = InstanceInput {
+									SourceOp = "Background15",
+									Source = "Depth",
+								},
+								TopLeftRed = Input { Value = 1, },
+								TopLeftGreen = Input { Value = 1, },
+								TopLeftBlue = Input { Value = 1, }
+							},
+							ViewInfo = OperatorInfo { Pos = { 165, 41.7576 } },
+						},
+						Merge22 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Background = Input {
+									SourceOp = "Merge21",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "Background14",
+									Source = "Output",
+								},
+								Gain = Input { Value = 0, },
+								Width = InstanceInput {
+									SourceOp = "Background15",
+									Source = "Width",
+								},
+								Height = InstanceInput {
+									SourceOp = "Background15",
+									Source = "Height",
+								},
+								UseFrameFormatSettings = InstanceInput {
+									SourceOp = "Background15",
+									Source = "UseFrameFormatSettings",
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { 165, 74.7576 } },
+						},
+						Background15 = Background {
+							CtrlWShown = false,
+							Inputs = {
+								Width = Input { Value = 3840, },
+								Height = Input { Value = 2802, },
+								TopLeftAlpha = Input { Value = 0, }
+							},
+							ViewInfo = OperatorInfo { Pos = { 275, 8.75758 } },
+						},
+						Merge23 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Background = Input {
+									SourceOp = "Background15",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "Merge22",
+									Source = "Output",
+								},
+								Gain = Input { Value = 0, },
+								Width = InstanceInput {
+									SourceOp = "Background15",
+									Source = "Width",
+								},
+								Height = InstanceInput {
+									SourceOp = "Background15",
+									Source = "Height",
+								},
+								UseFrameFormatSettings = InstanceInput {
+									SourceOp = "Background15",
+									Source = "UseFrameFormatSettings",
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { 275, 41.7576 } },
+						}
+					},
+					UserControls = ordered() { Color = ControlPage { CTID_DIB_ID = "Icons.Tools.Tabs.Color" }, BackgroundNest = BeginNest { ICS_ControlPage = "Color", LINKS_Name = "Background", }, Red = InstanceInput { Source = "TopLeftRed", ICS_ControlPage = "Color", SourceOp = "Background15", INP_Default = 0, }, Green = InstanceInput { Source = "TopLeftGreen", ICS_ControlPage = "Color", SourceOp = "Background15", INP_Default = 0, }, Blue = InstanceInput { Source = "TopLeftBlue", ICS_ControlPage = "Color", SourceOp = "Background15", INP_Default = 0, }, Alpha = InstanceInput { Source = "TopLeftAlpha", ICS_ControlPage = "Color", SourceOp = "Background15", INP_Default = 0, }, EndBackgroundNest = EndNest {
+						}, Image = ControlPage { CTID_DIB_ID = "Icons.Tools.Tabs.Image" }, ImageNest = BeginNest { ICS_ControlPage = "Image", LINKS_Name = "Image", }, UseFrameFormatSettings = InstanceInput { SourceOp = "Background15", Source = "UseFrameFormatSettings", ICS_ControlPage = "Image", }, Width = InstanceInput { Source = "Width", ICS_ControlPage = "Image", SourceOp = "Background15", INP_Default = 3840, }, Height = InstanceInput { Source = "Height", ICS_ControlPage = "Image", SourceOp = "Background15", INP_Default = 2802, }, Depth = InstanceInput { SourceOp = "Background15", Source = "Depth", ICS_ControlPage = "Image", }, EndImageNest = EndNest {
+						} }
+				},
+				PhoneFILLSVG = GroupOperator {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = ordered() {
+						Red = InstanceInput {
+							SourceOp = "Background12",
+							Source = "TopLeftRed",
+						},
+						Green = InstanceInput {
+							SourceOp = "Background12",
+							Source = "TopLeftGreen",
+						},
+						Blue = InstanceInput {
+							SourceOp = "Background12",
+							Source = "TopLeftBlue",
+						},
+						Alpha = InstanceInput {
+							SourceOp = "Background12",
+							Source = "TopLeftAlpha",
+						},
+						UseFrameFormatSettings = InstanceInput {
+							SourceOp = "Background12",
+							Source = "UseFrameFormatSettings",
+						},
+						Width = InstanceInput {
+							SourceOp = "Background12",
+							Source = "Width",
+						},
+						Height = InstanceInput {
+							SourceOp = "Background12",
+							Source = "Height",
+						},
+						Depth = InstanceInput {
+							SourceOp = "Background12",
+							Source = "Depth",
+						}
+					},
+					Outputs = {
+						Output1 = InstanceOutput {
+							SourceOp = "Merge20",
+							Source = "Output",
+						}
+					},
+					ViewInfo = GroupInfo { Pos = { 1870, 49.5 } },
+					Tools = ordered() {
+						path12 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								Level = Input { Value = 0, },
+								JoinStyle = Input { Value = 2, },
+								MiterLimit = Input { Value = 4, },
+								CapStyle = Input { Value = 0, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Closed = true,
+										Points = {
+											{ Linear = true, X = -0.5, Y = 0.5, LX = 0, LY = -0.333333333333333, RX = 0.333333333333333, RY = 0 },
+											{ Linear = true, X = 0.5, Y = 0.5, LX = -0.333333333333333, LY = 0, RX = 0, RY = -0.333333333333333 },
+											{ Linear = true, X = 0.5, Y = -0.5, LX = 0, LY = 0.333333333333333, RX = -0.333333333333333, RY = 0 },
+											{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0, RX = 0, RY = 0.333333333333333 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -110, 8.75758 } },
+						},
+						Background10 = Background {
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "path12",
+									Source = "Mask",
+								},
+								Width = InstanceInput {
+									SourceOp = "Background12",
+									Source = "Width",
+								},
+								Height = InstanceInput {
+									SourceOp = "Background12",
+									Source = "Height",
+								},
+								UseFrameFormatSettings = InstanceInput {
+									SourceOp = "Background12",
+									Source = "UseFrameFormatSettings",
+								},
+								Depth = InstanceInput {
+									SourceOp = "Background12",
+									Source = "Depth",
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -110, 41.7576 } },
+						},
+						path22 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								JoinStyle = Input { Value = 2, },
+								MiterLimit = Input { Value = 4, },
+								CapStyle = Input { Value = 0, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Closed = true,
+										Points = {
+											{ X = -0.225451001819926, Y = -0.221545823230264, LX = -0.156974447891166, LY = 0.156363324249512, RX = 0.157905062664837, RY = -0.157509173229191 },
+											{ X = 0.273176093999406, Y = -0.499309057356822, LX = -0.151914364510147, LY = 0, RX = 0.0714460884492765, RY = 0 },
+											{ X = 0.44766528845616, Y = -0.425043452138274, LX = -0.0408042094937335, LY = -0.045748127802931, RX = 0.0387304400951697, RY = 0.0439199193184988 },
+											{ X = 0.5, Y = -0.319496598931399, LX = 0, LY = -0.0292084200587944, RX = 0, RY = 0.022303285196232 },
+											{ X = 0.451124439071192, Y = -0.251895800699526, LX = 0.0345785988719038, LY = -0.0245906915863786, RX = -0.0438761417563365, RY = 0.0312698038037609 },
+											{ Linear = true, X = 0.319496013802183, Y = -0.158086389288243, LX = 0.0438761417563365, LY = -0.0312698038037608, RX = -0.0322638936096065, RY = 0.0229942278394095 },
+											{ X = 0.253346211928907, Y = -0.130950797158981, LX = 0.0191371914622656, LY = 0, RX = -0.0163707314554676, RY = 0 },
+											{ X = 0.195022523200833, Y = -0.149112718065361, LX = 0.0274193617781067, LY = 0.0153981503336694, RX = -0.0285810168353935, RY = -0.0157114348861661 },
+											{ Linear = true, X = 0.109279472694653, Y = -0.196247022723859, LX = 0.0285810168353935, LY = 0.0157114348861662, RX = -0.0101408184075, RY = -0.0055189580069952 },
+											{ X = 0.0869197640549506, Y = -0.202911829710534, LX = 0.00737435840070222, LY = 0, RX = -0.0101408184074999, RY = 0 },
+											{ X = 0.0597155235837489, Y = -0.196247022723859, LX = 0.0101408184075, LY = -0.00414136428985257, RX = -0.0408042094937334, RY = 0.0190931914254447 },
+											{ X = -0.0894302297065315, Y = -0.0817264982941012, LX = 0.0509471791143026, LY = -0.0506061841512349, RX = -0.050948469842144, RY = 0.0508164710426366 },
+											{ X = -0.200322681960357, Y = 0.0619938630560264, LX = 0.0205436545668102, LY = -0.0411990644379117, RX = -0.00276818097725307, RY = 0.00528721326953202 },
+											{ X = -0.206312949872433, Y = 0.0842980065661009, LX = 0, LY = -0.00873591828852222, RX = 0, RY = 0.00666523614359593 },
+											{ X = -0.198246761348725, Y = 0.104531038774328, LX = -0.0041522714658796, LY = -0.00735574962985208, RX = 0.0167520698255079, RY = 0.0286595283565436 },
+											{ Linear = true, X = -0.147990551872201, Y = 0.190509623843959, LX = -0.0167520698255079, LY = -0.0286595283565436, RX = 0.0136021202356009, RY = 0.0234469883913053 },
+											{ X = -0.130474514578771, Y = 0.245233568654379, LX = 0, LY = -0.0183996738407399, RX = 0, RY = 0.0206857927601227 },
+											{ X = -0.157678755049973, Y = 0.316048752226252, LX = 0.0202842182706828, LY = -0.0278256764585971, RX = -0.0298133750955497, RY = 0.0420045919790571 },
+											{ Linear = true, X = -0.247118880336622, Y = 0.442062528163423, LX = 0.0298133750955497, LY = -0.0420045919790571, RX = -0.0255822258171383, RY = 0.0358712100079394 },
+											{ X = -0.321573225141657, Y = 0.5, LX = 0.0292801610828347, LY = 0, RX = -0.0359622591179166, RY = 0 },
+											{ X = -0.43153592310704, Y = 0.442515288715319, LX = 0.0311181575290306, LY = 0.0296589919103921, RX = -0.0447199765948018, RY = -0.0432268308907152 },
+											{ X = -0.5, Y = 0.27213140784928, LX = 0, LY = 0.0671484668368989, RX = 0, RY = -0.152436967577195 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { 0, 8.75758 } },
+						},
+						Background11 = Background {
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "path22",
+									Source = "Mask",
+								},
+								Width = InstanceInput {
+									SourceOp = "Background12",
+									Source = "Width",
+								},
+								Height = InstanceInput {
+									SourceOp = "Background12",
+									Source = "Height",
+								},
+								UseFrameFormatSettings = InstanceInput {
+									SourceOp = "Background12",
+									Source = "UseFrameFormatSettings",
+								},
+								Depth = InstanceInput {
+									SourceOp = "Background12",
+									Source = "Depth",
+								},
+								TopLeftRed = Input { Value = 1, },
+								TopLeftGreen = Input { Value = 1, },
+								TopLeftBlue = Input { Value = 1, }
+							},
+							ViewInfo = OperatorInfo { Pos = { 0, 41.7576 } },
+						},
+						Merge19 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Background = Input {
+									SourceOp = "Background10",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "Background11",
+									Source = "Output",
+								},
+								Width = InstanceInput {
+									SourceOp = "Background12",
+									Source = "Width",
+								},
+								Height = InstanceInput {
+									SourceOp = "Background12",
+									Source = "Height",
+								},
+								UseFrameFormatSettings = InstanceInput {
+									SourceOp = "Background12",
+									Source = "UseFrameFormatSettings",
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { 0, 74.7576 } },
+						},
+						Background12 = Background {
+							CtrlWShown = false,
+							Inputs = {
+								Width = Input { Value = 3840, },
+								Height = Input { Value = 3850, },
+								TopLeftAlpha = Input { Value = 0, }
+							},
+							ViewInfo = OperatorInfo { Pos = { 110, 8.75758 } },
+						},
+						Merge20 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Background = Input {
+									SourceOp = "Background12",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "Merge19",
+									Source = "Output",
+								},
+								Width = InstanceInput {
+									SourceOp = "Background12",
+									Source = "Width",
+								},
+								Height = InstanceInput {
+									SourceOp = "Background12",
+									Source = "Height",
+								},
+								UseFrameFormatSettings = InstanceInput {
+									SourceOp = "Background12",
+									Source = "UseFrameFormatSettings",
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { 110, 41.7576 } },
+						}
+					},
+					UserControls = ordered() { Color = ControlPage { CTID_DIB_ID = "Icons.Tools.Tabs.Color" }, BackgroundNest = BeginNest { ICS_ControlPage = "Color", LINKS_Name = "Background", }, Red = InstanceInput { Source = "TopLeftRed", ICS_ControlPage = "Color", SourceOp = "Background12", INP_Default = 0, }, Green = InstanceInput { Source = "TopLeftGreen", ICS_ControlPage = "Color", SourceOp = "Background12", INP_Default = 0, }, Blue = InstanceInput { Source = "TopLeftBlue", ICS_ControlPage = "Color", SourceOp = "Background12", INP_Default = 0, }, Alpha = InstanceInput { Source = "TopLeftAlpha", ICS_ControlPage = "Color", SourceOp = "Background12", INP_Default = 0, }, EndBackgroundNest = EndNest {
+						}, Image = ControlPage { CTID_DIB_ID = "Icons.Tools.Tabs.Image" }, ImageNest = BeginNest { ICS_ControlPage = "Image", LINKS_Name = "Image", }, UseFrameFormatSettings = InstanceInput { SourceOp = "Background12", Source = "UseFrameFormatSettings", ICS_ControlPage = "Image", }, Width = InstanceInput { Source = "Width", ICS_ControlPage = "Image", SourceOp = "Background12", INP_Default = 3840, }, Height = InstanceInput { Source = "Height", ICS_ControlPage = "Image", SourceOp = "Background12", INP_Default = 3850, }, Depth = InstanceInput { SourceOp = "Background12", Source = "Depth", ICS_ControlPage = "Image", }, EndImageNest = EndNest {
+						} }
+				},
+				Color_Button_Accept = Background {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Ellipse2_1",
+							Source = "Mask",
+						},
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftRed = Input { Value = 0.203921568627451, },
+						TopLeftGreen = Input { Value = 0.780392156862745, },
+						TopLeftBlue = Input { Value = 0.349019607843137, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 1870, 187.496 } },
+					Colors = { TileColor = { R = 0.584313725490196, G = 0.294117647058824, B = 0.803921568627451 }, }
+				},
+				Dissolve1 = Dissolve {
+					Transitions = {
+						[0] = "DFTDissolve"
+					},
+					CtrlWShown = false,
+					Inputs = {
+						Blend = Input { Value = 0, },
+						ProcessLayers = Input { Value = FuID { ":All" }, },
+						Background = Input {
+							SourceOp = "Merge16",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Merge23",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 1650, 148.5 } },
+				},
+				Transform6 = Transform {
+					CtrlWShown = false,
+					Inputs = {
+						Center = Input { Value = { 0.7904711948629, 0.5 }, },
+						Size = Input { Value = 0.055, },
+						Input = Input {
+							SourceOp = "Dissolve1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 1650, 181.5 } },
+					Colors = { TileColor = { R = 0.372549019607843, G = 0.6, B = 0.125490196078431 }, }
+				},
+				Transform7 = Transform {
+					CtrlWShown = false,
+					Inputs = {
+						Pivot = Input { Value = { 0.5, 0.304 }, },
+						Input = Input {
+							SourceOp = "Transform3_1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 1652.27, 276.873 } },
+					Colors = { TileColor = { R = 0.372549019607843, G = 0.6, B = 0.125490196078431 }, }
+				},
+				Decline = TextPlus {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						Center = Input { Value = { 0.73, 0.5 }, },
+						LayoutRotation = Input { Value = 1, },
+						TransformRotation = Input { Value = 1, },
+						Softness1 = Input { Value = 1, },
+						Font = Input { Value = "SF Pro", },
+						Style = Input { Value = "Regular", },
+						Size = Input { Value = 0.038, },
+						VerticalJustificationNew = Input { Value = 3, },
+						HorizontalJustificationNew = Input { Value = 3, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 1485, 280.5 } },
+					Colors = { TileColor = { R = 0.584313725490196, G = 0.294117647058824, B = 0.803921568627451 }, },
+					Version = 1
+				},
+				Merge4 = Merge {
+					CtrlWShown = false,
+					Inputs = {
+						Background = Input {
+							SourceOp = "Merge12",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Transform7",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 1417.25, 315.564 } },
+				},
+				Merge13 = Merge {
+					CtrlWShown = false,
+					Inputs = {
+						Background = Input {
+							SourceOp = "Merge8",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Transform2",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 1650, 346.5 } },
+					Colors = { TileColor = { R = 0.372549019607843, G = 0.6, B = 0.125490196078431 }, }
+				},
+				Ellipse2_1 = EllipseMask {
+					CtrlWShown = false,
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Center = Input { Value = { 0.901990802706079, 0.5 }, },
+						Width = Input { Value = 0.095, },
+						Height = Input { Value = 0.095, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 1860.22, 149.625 } },
+				},
+				Transform3_1 = Transform {
+					CtrlWShown = false,
+					Inputs = {
+						Pivot = Input { Value = { 0.5, 0.307 }, },
+						Input = Input {
+							SourceOp = "Transform6",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 1650, 214.5 } },
+				},
+				Transform2 = Transform {
+					CtrlWShown = false,
+					Inputs = {
+						Center = Input {
+							SourceOp = "Path1",
+							Source = "Position",
+						},
+						Input = Input {
+							SourceOp = "Merge4",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 1545.87, 317.982 } },
+				},
+				Path1 = PolyPath {
+					DrawMode = "InsertAndModify",
+					CtrlWZoom = false,
+					Inputs = {
+						Displacement = Input {
+							Expression = "math.max(0, math.min(1, (time-(TimeSpeed1.IN_Anim-25))/5))",
+						},
+						PolyLine = Input {
+							Value = Polyline {
+								Points = {
+									{ Linear = true, LockY = true, X = 0, Y = 0, RX = 0.0371666666666667, RY = 0 },
+									{ Linear = true, LockY = true, X = 0.1115, Y = 0, LX = -0.0371666666666667, LY = 0 }
+								}
+							},
+						}
+					},
+				},
+				Path1Displacement = BezierSpline {
+					SplineColor = { Red = 255, Green = 0, Blue = 255 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[50] = { 0, RH = { 51.6666666666667, 0.333333333333333 }, Flags = { LockedY = true } },
+						[55] = { 1, LH = { 53.3333333333333, 0.666666666666667 }, Flags = { Linear = true, LockedY = true } }
+					}
+				},
+				Instance_Text1_1_1 = TextPlus {
+					CtrlWShown = false,
+					SourceOp = "Voice_Call",
+					Inputs = {
+						EffectMask = Input {
+						},
+						SettingsNest = Input {
+						},
+						ImageNest = Input {
+						},
+						["Gamut.ColorSpaceNest"] = Input {
+						},
+						["Gamut.GammaSpaceNest"] = Input {
+						},
+						Layout = Input {
+						},
+						LayoutRotation = Input {
+							Value = 1,
+						},
+						Background = Input {
+						},
+						TransformTransform = Input {
+						},
+						TransformRotation = Input {
+							Value = 1,
+						},
+						TransformPivot = Input {
+						},
+						TransformShear = Input {
+						},
+						TransformSize = Input {
+						},
+						Properties1 = Input {
+						},
+						Red1 = Input {
+							Value = 0,
+						},
+						Green1 = Input {
+							Value = 0,
+						},
+						Blue1 = Input {
+							Value = 0,
+						},
+						Alpha1 = Input {
+						},
+						Softness1 = Input {
+							Value = 1,
+						},
+						Position1 = Input {
+						},
+						Rotation1 = Input {
+						},
+						PivotNest1 = Input {
+						},
+						Shear1 = Input {
+						},
+						Size1 = Input {
+						},
+						TextText = Input {
+						},
+						TabSpacing = Input {
+						},
+						AdvancedFontControls = Input {
+						},
+						ClearSelectedKerning = Input {
+						},
+						ClearAllKerning = Input {
+						},
+						ClearSelectedPlacement = Input {
+						},
+						ClearAllPlacement = Input {
+						},
+						Internal = Input {
+						},
+						CommentsNest = Input {
+						},
+						FrameRenderScriptNest = Input {
+						},
+						StartRenderScripts = Input {
+						},
+						EndRenderScripts = Input {
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 990, 48.5259 } },
+					Version = 1
+				},
+				Color_Button_Accept_1 = Background {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Ellipse2_1_1",
+							Source = "Mask",
+						},
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftRed = Input { Value = 0.596078431372549, },
+						TopLeftGreen = Input { Value = 0.596078431372549, },
+						TopLeftBlue = Input { Value = 0.615686274509804, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 1116.28, 228.83 } },
+					Colors = { TileColor = { R = 0.584313725490196, G = 0.294117647058824, B = 0.803921568627451 }, }
+				},
+				Transform5_1 = Transform {
+					CtrlWShown = false,
+					Inputs = {
+						Center = Input { Value = { 0.7904711948629, 0.5 }, },
+						Size = Input { Value = 0.065, },
+						Input = Input {
+							SourceOp = "Dissolve7_1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 1201.89, 289.229 } },
+				},
+				Merge12 = Merge {
+					CtrlWShown = false,
+					Inputs = {
+						Background = Input {
+							SourceOp = "Transform3",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Decline",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 1320, 280.5 } },
+					Colors = { TileColor = { R = 0.372549019607843, G = 0.6, B = 0.125490196078431 }, }
+				},
+				Transform3 = Transform {
+					CtrlWShown = false,
+					Inputs = {
+						Pivot = Input { Value = { 0.5, 0.404 }, },
+						Input = Input {
+							SourceOp = "Transform4",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 1320, 214.5 } },
+				},
+				Instance_Color_DarkMode = ofx.com.blackmagicdesign.openfx.ColorGeneratorPlugin {
+					CtrlWShown = false,
+					NameSet = true,
+					SourceOp = "Color_DarkMode",
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Instance_Text1_1_1",
+							Source = "Output",
+						},
+						SettingsNest = Input {
+						},
+						Source = Input {
+							SourceOp = "Instance_Text1_1_1",
+							Source = "Output",
+						},
+						blendGroup = Input {
+							Value = 0,
+						},
+						CommentsNest = Input {
+						},
+						FrameRenderScriptNest = Input {
+						},
+						StartRenderScripts = Input {
+						},
+						EndRenderScripts = Input {
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 990, 115.5 } },
+					Colors = { TileColor = { R = 0.372549019607843, G = 0.6, B = 0.125490196078431 }, }
+				},
+				Transform4 = Transform {
+					CtrlWShown = false,
+					Inputs = {
+						Pivot = Input { Value = { 0.28, 0.408 }, },
+						UseSizeAndAspect = Input { Value = 0, },
+						Input = Input {
+							SourceOp = "Color_Button_Decline",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 1320, 181.5 } },
+					Colors = { TileColor = { R = 0.372549019607843, G = 0.6, B = 0.125490196078431 }, }
+				},
+				Color_Button_Decline = Background {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Ellipse2",
+							Source = "Mask",
+						},
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftRed = Input { Value = 1, },
+						TopLeftGreen = Input { Value = 0.231372549019608, },
+						TopLeftBlue = Input { Value = 0.188235294117647, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 1320, 148.5 } },
+					Colors = { TileColor = { R = 0.584313725490196, G = 0.294117647058824, B = 0.803921568627451 }, }
+				},
+				Ellipse2 = EllipseMask {
+					CtrlWShown = false,
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Center = Input { Value = { 0.790471194862942, 0.5 }, },
+						Width = Input { Value = 0.095, },
+						Height = Input { Value = 0.095, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 1321.26, 105.792 } },
+				},
+				Dissolve7_1 = Dissolve {
+					Transitions = {
+						[0] = "DFTDissolve"
+					},
+					CtrlWShown = false,
+					Inputs = {
+						Blend = Input { Value = 0, },
+						ProcessLayers = Input { Value = FuID { ":All" }, },
+						Background = Input {
+							SourceOp = "Merge23",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Merge16",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 1201.89, 256.229 } },
+				},
+				Ellipse2_1_1 = EllipseMask {
+					CtrlWShown = false,
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Center = Input { Value = { 0.7904711948629, 0.5 }, },
+						Width = Input { Value = 0.095, },
+						Height = Input { Value = 0.095, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 1120.72, 195.267 } },
+				},
+				Merge8 = Merge {
+					CtrlWShown = false,
+					Inputs = {
+						Background = Input {
+							SourceOp = "Merge7",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Merge11_1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 1208.85, 371.339 } },
+				},
+				Merge11_1 = Merge {
+					CtrlWShown = false,
+					Inputs = {
+						Background = Input {
+							SourceOp = "Color_Button_Accept_1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Transform5_1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 1116.28, 321.834 } },
+					Colors = { TileColor = { R = 0.372549019607843, G = 0.6, B = 0.125490196078431 }, }
+				},
+				Color_LightMode = ofx.com.blackmagicdesign.openfx.ColorGeneratorPlugin {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						refreshTrigger = Input {
+							Value = Number {
+								Value = 1
+							},
+						},
+						EffectMask = Input {
+							SourceOp = "Name",
+							Source = "Output",
+						},
+						Source = Input {
+							SourceOp = "Name",
+							Source = "Output",
+						},
+						cColorRed = Input { Value = 1, },
+						cColorGreen = Input { Value = 1, },
+						cColorBlue = Input { Value = 1, },
+						blendGroup = Input { Value = 0, },
+						blendIn = Input { Value = 1, },
+						blend = Input { Value = 0, },
+						ignoreContentShape = Input { Value = 0, },
+						legacyIsProcessRGBOnly = Input { Value = 0, },
+						IsNoTemporalFramesReqd = Input { Value = 0, },
+						srcProcessingAlphaMode = Input { Value = -1, },
+						dstProcessingAlphaMode = Input { Value = -1, },
+						resolvefxVersion = Input { Value = "1.0", }
+					},
+					ViewInfo = OperatorInfo { Pos = { 605, 148.5 } },
+					Colors = { TileColor = { R = 0.584313725490196, G = 0.294117647058824, B = 0.803921568627451 }, }
+				},
+				Dissolve2_1_1_1 = Dissolve {
+					Transitions = {
+						[0] = "DFTDissolve"
+					},
+					CtrlWShown = false,
+					Inputs = {
+						Mix = Input { Expression = "CustomTool1.Mode == 0 and 1 or 0", },
+						Background = Input {
+							SourceOp = "Instance_Color_DarkMode",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Instance_Color_LightMode",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 880, 247.5 } },
+					Colors = { TileColor = { R = 0.372549019607843, G = 0.6, B = 0.125490196078431 }, }
+				},
+				Merge3 = Merge {
+					CtrlWShown = false,
+					Inputs = {
+						Background = Input {
+							SourceOp = "Merge2",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Transform1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 330, 412.5 } },
+					Colors = { TileColor = { R = 0.372549019607843, G = 0.6, B = 0.125490196078431 }, }
+				},
+				Color_DarkMode = ofx.com.blackmagicdesign.openfx.ColorGeneratorPlugin {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						refreshTrigger = Input {
+							Value = Number {
+								Value = 1
+							},
+						},
+						EffectMask = Input {
+							SourceOp = "Instance_Text1",
+							Source = "Output",
+						},
+						Source = Input {
+							SourceOp = "Instance_Text1",
+							Source = "Output",
+						},
+						cColorRed = Input { Value = 0.117647058823529, },
+						cColorGreen = Input { Value = 0.117647058823529, },
+						cColorBlue = Input { Value = 0.117647058823529, },
+						blendGroup = Input { Value = 0, },
+						blendIn = Input { Value = 1, },
+						blend = Input { Value = 0, },
+						ignoreContentShape = Input { Value = 0, },
+						legacyIsProcessRGBOnly = Input { Value = 0, },
+						IsNoTemporalFramesReqd = Input { Value = 0, },
+						srcProcessingAlphaMode = Input { Value = -1, },
+						dstProcessingAlphaMode = Input { Value = -1, },
+						resolvefxVersion = Input { Value = "1.0", }
+					},
+					ViewInfo = OperatorInfo { Pos = { 770, 115.5 } },
+					Colors = { TileColor = { R = 0.584313725490196, G = 0.294117647058824, B = 0.803921568627451 }, }
+				},
+				Ellipse1 = EllipseMask {
+					CtrlWShown = false,
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Center = Input { Value = { 0.500867426403689, 0.499999999999996 }, },
+						Width = Input {
+							Value = 0.37,
+							Expression = "Height",
+						},
+						Height = Input { Value = 0.37, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -55, 115.5 } },
+					Colors = { TileColor = { R = 0.372549019607843, G = 0.6, B = 0.125490196078431 }, }
+				},
+				Merge5 = Merge {
+					CtrlWShown = false,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Instance_Ellipse1",
+							Source = "Mask",
+						},
+						Background = Input {
+							SourceOp = "Background2_1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Position_Profile_1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 165, 181.5 } },
+					Colors = { TileColor = { R = 0.372549019607843, G = 0.6, B = 0.125490196078431 }, }
+				},
+				Background1 = Background {
+					CtrlWShown = false,
+					Inputs = {
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftAlpha = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -495, 412.5 } },
+					Colors = { TileColor = { R = 0.372549019607843, G = 0.6, B = 0.125490196078431 }, }
+				},
+				Position_Profile_1 = Transform {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Center = Input { Value = { 0.546, 0.47 }, },
+						Size = Input { Value = 1.841, },
+						XSize = Input { Value = 0.19, },
+						YSize = Input { Value = 0.19, },
+						Input = Input {
+							SourceOp = "Loader5",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 165, 280.5 } },
+					Colors = { TileColor = { R = 0.584313725490196, G = 0.294117647058824, B = 0.803921568627451 }, }
+				},
+				Merge7 = Merge {
+					CtrlWShown = false,
+					Inputs = {
+						Blend = Input {
+							Expression = "1-math.max(0, math.min(1, (time-(TimeSpeed1.IN_Anim-25))/5))",
+						},
+						Background = Input {
+							SourceOp = "Merge1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Dissolve2_1_1_1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 880, 379.5 } },
+					Colors = { TileColor = { R = 0.372549019607843, G = 0.6, B = 0.125490196078431 }, }
+				},
+				Merge7Blend = BezierSpline {
+					SplineColor = { Red = 205, Green = 205, Blue = 205 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[50] = { 1, RH = { 51.6666666666667, 0.666666666666667 }, Flags = { Linear = true } },
+						[55] = { 0, LH = { 53.3333333333333, 0.333333333333333 }, Flags = { Linear = true } }
+					}
+				},
+				Merge2 = Merge {
+					CtrlWShown = false,
+					Inputs = {
+						Background = Input {
+							SourceOp = "Background1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Dissolve2_1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -165, 412.5 } },
+					Colors = { TileColor = { R = 0.372549019607843, G = 0.6, B = 0.125490196078431 }, }
+				},
+				Background2 = Background {
+					CtrlWShown = false,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Rectangle1",
+							Source = "Mask",
+						},
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftRed = Input {
+							Value = 0.117647058823529,
+							Expression = "Color_DarkMode.cColorRed",
+						},
+						TopLeftGreen = Input {
+							Value = 0.117647058823529,
+							Expression = "Color_DarkMode.cColorGreen",
+						},
+						TopLeftBlue = Input {
+							Value = 0.117647058823529,
+							Expression = "Color_DarkMode.cColorBlue",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -330, 346.5 } },
+				},
+				Transform1 = Transform {
+					CtrlWShown = false,
+					Inputs = {
+						Center = Input { Value = { 0.109046854669963, 0.500275180019931 }, },
+						Size = Input { Value = 0.3991267, },
+						Input = Input {
+							SourceOp = "Merge5",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 330, 181.5 } },
+					Colors = { TileColor = { R = 0.372549019607843, G = 0.6, B = 0.125490196078431 }, }
+				},
+				Background2_1 = Background {
+					CtrlWShown = false,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Ellipse1",
+							Source = "Mask",
+						},
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftRed = Input { Value = 1, },
+						TopLeftGreen = Input { Value = 1, },
+						TopLeftBlue = Input { Value = 1, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -55, 181.5 } },
+				},
+				Merge1 = Merge {
+					CtrlWShown = false,
+					Inputs = {
+						Background = Input {
+							SourceOp = "Merge3",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Dissolve2_1_1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 605, 412.5 } },
+					Colors = { TileColor = { R = 0.372549019607843, G = 0.6, B = 0.125490196078431 }, }
+				},
+				Rectangle1 = RectangleMask {
+					CtrlWShown = false,
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Width = Input { Value = 0.972, },
+						Height = Input { Value = 0.34, },
+						CornerRadius = Input { Value = 1, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -495, 346.5 } },
+					Colors = { TileColor = { R = 0.372549019607843, G = 0.6, B = 0.125490196078431 }, }
+				},
+				Name = TextPlus {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						Center = Input { Value = { 0.206719246781547, 0.475295800286049 }, },
+						LayoutRotation = Input { Value = 1, },
+						TransformRotation = Input { Value = 1, },
+						Softness1 = Input { Value = 1, },
+						StyledText = Input { Value = "Aga Orlova", },
+						Font = Input { Value = "SF Pro", },
+						Style = Input { Value = "Semibold", },
+						Size = Input { Value = 0.0698, },
+						VerticalJustificationNew = Input { Value = 3, },
+						HorizontalLeftCenterRight = Input { Value = -1, },
+						HorizontalJustificationNew = Input { Value = 3, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 605, 49.5 } },
+					Colors = { TileColor = { R = 0.584313725490196, G = 0.294117647058824, B = 0.803921568627451 }, },
+					Version = 1
+				},
+				Voice_Call = TextPlus {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						Center = Input { Value = { 0.2067192467815, 0.56874156338201 }, },
+						LayoutRotation = Input { Value = 1, },
+						TransformRotation = Input { Value = 1, },
+						Softness1 = Input { Value = 1, },
+						StyledText = Input { Value = "iPhone", },
+						Font = Input { Value = "SF Pro", },
+						Style = Input { Value = "Regular", },
+						Size = Input { Value = 0.04, },
+						VerticalTopCenterBottom = Input { Value = -1, },
+						VerticalJustificationNew = Input { Value = 3, },
+						HorizontalLeftCenterRight = Input { Value = -1, },
+						HorizontalJustificationNew = Input { Value = 3, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 880, 49.5 } },
+					Colors = { TileColor = { R = 0.584313725490196, G = 0.294117647058824, B = 0.803921568627451 }, },
+					Version = 1
+				},
+				Dissolve2_1_1 = Dissolve {
+					Transitions = {
+						[0] = "DFTDissolve"
+					},
+					CtrlWShown = false,
+					Inputs = {
+						Mix = Input { Expression = "CustomTool1.Mode == 0 and 1 or 0", },
+						Background = Input {
+							SourceOp = "Color_DarkMode",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Color_LightMode",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 605, 247.5 } },
+					Colors = { TileColor = { R = 0.372549019607843, G = 0.6, B = 0.125490196078431 }, }
+				},
+				Instance_Text1 = TextPlus {
+					CtrlWShown = false,
+					SourceOp = "Name",
+					Inputs = {
+						EffectMask = Input {
+						},
+						SettingsNest = Input {
+						},
+						ImageNest = Input {
+						},
+						["Gamut.ColorSpaceNest"] = Input {
+						},
+						["Gamut.GammaSpaceNest"] = Input {
+						},
+						Layout = Input {
+						},
+						LayoutRotation = Input {
+							Value = 1,
+						},
+						Background = Input {
+						},
+						TransformTransform = Input {
+						},
+						TransformRotation = Input {
+							Value = 1,
+						},
+						TransformPivot = Input {
+						},
+						TransformShear = Input {
+						},
+						TransformSize = Input {
+						},
+						Properties1 = Input {
+						},
+						Red1 = Input {
+							Value = 0,
+						},
+						Green1 = Input {
+							Value = 0,
+						},
+						Blue1 = Input {
+							Value = 0,
+						},
+						Alpha1 = Input {
+						},
+						Softness1 = Input {
+							Value = 1,
+						},
+						Position1 = Input {
+						},
+						Rotation1 = Input {
+						},
+						PivotNest1 = Input {
+						},
+						Shear1 = Input {
+						},
+						Size1 = Input {
+						},
+						TextText = Input {
+						},
+						TabSpacing = Input {
+						},
+						AdvancedFontControls = Input {
+						},
+						ClearSelectedKerning = Input {
+						},
+						ClearAllKerning = Input {
+						},
+						ClearSelectedPlacement = Input {
+						},
+						ClearAllPlacement = Input {
+						},
+						Internal = Input {
+						},
+						CommentsNest = Input {
+						},
+						FrameRenderScriptNest = Input {
+						},
+						StartRenderScripts = Input {
+						},
+						EndRenderScripts = Input {
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 770, 49.5 } },
+					Version = 1
+				},
+				Background2_2 = Background {
+					CtrlWShown = false,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Rectangle1",
+							Source = "Mask",
+						},
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftRed = Input {
+							Value = 1,
+							Expression = "Color_LightMode.cColorRed",
+						},
+						TopLeftGreen = Input {
+							Value = 1,
+							Expression = "Color_LightMode.cColorGreen",
+						},
+						TopLeftBlue = Input {
+							Value = 1,
+							Expression = "Color_LightMode.cColorBlue",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -330, 280.5 } },
+				},
+				Dissolve2_1 = Dissolve {
+					Transitions = {
+						[0] = "DFTDissolve"
+					},
+					CtrlWShown = false,
+					Inputs = {
+						Mix = Input { Expression = "CustomTool1.Mode == 0 and 1 or 0", },
+						Background = Input {
+							SourceOp = "Background2_2",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Background2",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -165, 346.5 } },
+					Colors = { TileColor = { R = 0.372549019607843, G = 0.6, B = 0.125490196078431 }, }
+				},
+				Instance_Ellipse1 = EllipseMask {
+					CtrlWShown = false,
+					SourceOp = "Ellipse1",
+					Inputs = {
+						EffectMask = Input {
+						},
+						SettingsNest = Input {
+						},
+						Width = Input {
+							Value = 0.37,
+							Expression = "Height"
+						},
+						CommentsNest = Input {
+						},
+						FrameRenderScriptNest = Input {
+						},
+						StartRenderScripts = Input {
+						},
+						EndRenderScripts = Input {
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 165, 115.5 } },
+					Colors = { TileColor = { R = 0.372549019607843, G = 0.6, B = 0.125490196078431 }, }
+				},
+				Instance_Color_LightMode = ofx.com.blackmagicdesign.openfx.ColorGeneratorPlugin {
+					CtrlWShown = false,
+					NameSet = true,
+					SourceOp = "Color_LightMode",
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Voice_Call",
+							Source = "Output",
+						},
+						SettingsNest = Input {
+						},
+						Source = Input {
+							SourceOp = "Voice_Call",
+							Source = "Output",
+						},
+						blendGroup = Input {
+							Value = 0,
+						},
+						CommentsNest = Input {
+						},
+						FrameRenderScriptNest = Input {
+						},
+						StartRenderScripts = Input {
+						},
+						EndRenderScripts = Input {
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 880, 148.5 } },
+					Colors = { TileColor = { R = 0.372549019607843, G = 0.6, B = 0.125490196078431 }, }
+				}
+			},
+		}
+	},
+		ActiveTool = "TeigMediaDynamicIslandPhoneCall"
+}
